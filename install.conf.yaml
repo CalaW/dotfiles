@@ -6,5 +6,6 @@
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
+    ~/.alacritty.yml: alacritty.yml
 
 
