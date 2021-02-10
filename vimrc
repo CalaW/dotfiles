@@ -28,6 +28,11 @@ set number
 " down.
 set relativenumber
 
+" Set tab space
+set ts=4
+set expandtab
+set autoindent
+
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
@@ -78,3 +83,30 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" Auto installation of Vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+" ale
+Plug 'dense-analysis/ale'
+
+" nerd-commenter
+Plug 'preservim/nerdcommenter'
+
+" Initialize plugin system
+call plug#end()
