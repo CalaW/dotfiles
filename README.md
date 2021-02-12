@@ -1,2 +1,7 @@
 # Dotfiles
-CalaW's dotfile repo.
+Configuration files for:
+- zsh
+- vim
+- alacritty
+- tmux
+- git
