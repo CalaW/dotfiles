@@ -108,5 +108,8 @@ Plug 'dense-analysis/ale'
 " nerd-commenter
 Plug 'preservim/nerdcommenter'
 
+" WakaTime
+Plug 'wakatime/vim-wakatime'
+
 " Initialize plugin system
 call plug#end()
