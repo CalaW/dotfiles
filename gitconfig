@@ -1,3 +1,9 @@
 [user]
 	email = maker_cc@foxmail.com
 	name = CalaW
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	editor = /usr/bin/vim

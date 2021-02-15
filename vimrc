@@ -1,7 +1,3 @@
-" Comments in Vimscript start with a `"`.
-
-" If you open this file in Vim, it'll be syntax highlighted for you.
-
 " Vim is based on Vi. Setting `nocompatible` switches from the default
 " Vi-compatibility mode and enables useful Vim functionality. This
 " configuration option turns out not to be necessary for the file named
@@ -13,6 +9,9 @@ set nocompatible
 
 " Turn on syntax highlighting.
 syntax on
+
+" Disable mode show since lightline was installed
+set noshowmode
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -96,6 +95,9 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+" Nord theme
+Plug 'arcticicestudio/nord-vim'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
@@ -111,5 +113,14 @@ Plug 'preservim/nerdcommenter'
 " WakaTime
 Plug 'wakatime/vim-wakatime'
 
+" lightline
+Plug 'itchyny/lightline.vim'
+
 " Initialize plugin system
 call plug#end()
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
+colorscheme nord

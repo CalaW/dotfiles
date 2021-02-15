@@ -8,6 +8,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Use GNU commands by default
+# export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# export MANPATH="/usr/local/opt/coreutils/liibexec/gnuman:$MANPATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/CalaW/.oh-my-zsh"
 
@@ -17,6 +21,7 @@ export ZSH="/Users/CalaW/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_THEME="agnoster"
+# ZSH_THEME="ys"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -119,3 +124,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Apply Nord dircolors
+# test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
