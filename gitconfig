@@ -7,3 +7,4 @@
 	rebase = false
 [core]
 	editor = /usr/bin/vim
+	quotepath = false

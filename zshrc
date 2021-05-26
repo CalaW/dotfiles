@@ -107,6 +107,7 @@ export LC_ALL="en_US.UTF-8"
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -117,8 +118,9 @@ export LC_ALL="en_US.UTF-8"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
+alias rm="trash"
+
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
@@ -127,3 +129,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
 # Apply Nord dircolors
 # test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
+
+# Use Autojump
+  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
