@@ -120,6 +120,8 @@ export EDITOR='vim'
 # Example aliases
 alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
 alias rm="trash"
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
