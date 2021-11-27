@@ -37,7 +37,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -122,6 +122,8 @@ alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
 alias rm="trash"
 alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
+alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
+alias scansion="open -a Scansion"
 
 export TERM=xterm-256color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
@@ -134,3 +136,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 
 # Use Autojump
   [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# Use thefuck
+eval $(thefuck --alias)

@@ -10,6 +10,13 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
+" key bindings
+noremap <buffer> j gj
+noremap <buffer> k gk
+
+noremap <buffer> gj j
+noremap <buffer> gk k
+
 " highlight current line, but only in active window
 augroup CursorLineOnlyInActiveWindow
     autocmd!
