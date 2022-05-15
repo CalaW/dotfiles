@@ -5,7 +5,7 @@
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
+#   ~/.zshrc: zshrc
     ~/.alacritty.yml: alacritty.yml
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
-    ~/.p10k.zsh: p10k.zsh
+#   ~/.p10k.zsh: p10k.zsh
