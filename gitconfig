@@ -8,3 +8,4 @@
 [core]
 	editor = /usr/bin/vim
 	quotepath = false
+	excludesfile = /Users/calaw/.gitignore

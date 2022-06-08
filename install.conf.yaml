@@ -3,9 +3,11 @@
 - link:
     ~/.bash_profile: bash_profile
     ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.alacritty.yml: alacritty.yml
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.p10k.zsh: p10k.zsh
+#   ~/.config/karabiner/karabiner.json: karabiner.json
