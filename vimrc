@@ -79,7 +79,7 @@ set noerrorbells visualbell t_vb=
 
 " Enable mouse support. You should avoid relying on this too much, but it can
 " sometimes be convenient.
-set mouse+=a
+set mouse=a
 
 set scrolloff=5 " show lines above and below cursor (when possible)
 
@@ -106,7 +106,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/vim-easy-align'
 
 " fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " ale
 Plug 'dense-analysis/ale'
@@ -120,11 +120,16 @@ Plug 'wakatime/vim-wakatime'
 " lightline
 Plug 'itchyny/lightline.vim'
 
+" committia
+"Plug 'rhysd/committia.vim'
+
+" airline
+Plug 'vim-airline/vim-airline'
+
 " Initialize plugin system
 call plug#end()
 
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ }
-
-colorscheme nord
+packadd! dracula_pro
+syntax enable
+let g:dracula_colorterm = 0
+colorscheme dracula_pro

@@ -1,13 +1,28 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
+    ~/.alacritty.yml: alacritty.yml
     ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.p10k.zsh: p10k.zsh
+    ~/.Rprofile: Rprofile
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.wakatime.cfg: wakatime.cfg
+    ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-    ~/.alacritty.yml: alacritty.yml
-    ~/.dir_colors: ./nord-dircolors/src/dir_colors
-    ~/.p10k.zsh: p10k.zsh
+#   ~/.mackup.cfg: mackup.cfg
 #   ~/.config/karabiner/karabiner.json: karabiner.json
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

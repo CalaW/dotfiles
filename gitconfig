@@ -3,9 +3,15 @@
 	name = CalaW
 [init]
 	defaultBranch = main
+;[url "git@github.com:"]
+    ;insteadOf = https://github.com/
+[commit]
+    verbose = true
 [pull]
 	rebase = false
+[color]
+    ui = true
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 	quotepath = false
 	excludesfile = /Users/calaw/.gitignore
