@@ -1,7 +1,10 @@
 # Dotfiles
 Configuration files for:
-- zsh
-- vim
 - alacritty
-- tmux
+- bash (not used anymore)
 - git
+- powerlevel10k
+- R
+- tmux
+- vim
+- zsh

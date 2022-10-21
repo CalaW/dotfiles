@@ -18,11 +18,8 @@
         create: true
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
-    ~/.wakatime.cfg: wakatime.cfg
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-#   ~/.mackup.cfg: mackup.cfg
-#   ~/.config/karabiner/karabiner.json: karabiner.json
 
 - shell:
   - [git submodule update --init --recursive --remote, Installing submodules]
