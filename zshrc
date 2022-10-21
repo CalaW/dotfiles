@@ -30,6 +30,8 @@ export EDITOR='vim'
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# themes
+test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
 export BAT_THEME="Nord"
 
 # alias brew="arch -arm64 brew"
@@ -44,7 +46,8 @@ alias myip="curl https://ipinfo.io/json"
 alias msupdate-disable='chmod 000 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
 alias msupdate-enable='chmod 007 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app && open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
 alias sudo='sudo '
-# prints the path of the front Finder window. Desktop if no window open
+
+# prints the path of the front Finder window. enter Home if no window open
 function pwdf () {
     osascript <<EOS
         tell application "Finder"
@@ -60,12 +63,6 @@ EOS
 # changes directory to frontmost Finder window
 alias cdf='cd "$(pwdf)"'
 
-
-### Added by Zinit's installer
-# source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-# autoload -Uz _zinit
-# (( ${+_comps} )) && _comps[zinit]=_zinit
-
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -76,7 +73,7 @@ if type brew &>/dev/null; then
 fi
 
 source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-ZVM_CURSOR_STYLE_ENABLED=false
+# ZVM_CURSOR_STYLE_ENABLED=false
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
