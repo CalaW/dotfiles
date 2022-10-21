@@ -25,4 +25,4 @@
 #   ~/.config/karabiner/karabiner.json: karabiner.json
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule update --init --recursive --remote, Installing submodules]
