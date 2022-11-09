@@ -29,6 +29,7 @@ export EDITOR='vim'
 # export TERM=xtrem-256color
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+export PATH=$PATH:"/opt/homebrew/Cellar/mono/6.12.0.182/bin"
 
 # themes
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
