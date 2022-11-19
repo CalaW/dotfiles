@@ -1,0 +1,275 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 17,
+    "polacode.transparentBackground": true,
+    "polacode.backgroundColor": "#ffffff",
+    "terminal.integrated.fontSize": 16,
+    "todo-tree.tree.showScanModeButton": false,
+    "[cpp]": {
+
+        "editor.wordBasedSuggestions": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    // "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk-XeLaTeX",
+            "command": "latexmk",
+            "args": [
+             "-pdfxe",
+             "-bibtex",
+             "-synctex=1",
+             "-shell-escape",
+             "-interaction=nonstopmode",
+             "-file-line-error",
+             "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk-pdfLaTeX",
+            "command": "latexmk",
+            "args": [
+             "-pdf",
+             "-bibtex",
+             "-synctex=1",
+             "-shell-escape",
+             "-interaction=nonstopmode",
+             "-file-line-error",
+             "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeXmk",
+            "tools": [
+                "XeLaTeXmk"
+            ]
+        },
+        {
+            "name": "PDFLaTeXmk",
+            "tools": [
+                "PDFLaTeXmk"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-r",
+        "%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "0",
+        "%PDF%",
+    ],
+    "vim.easymotion": true,
+    "terminal.external.osxExec": "Alacritty.app",
+    "debug.console.fontSize": 16,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "KEY POINT",
+        "NOTE"
+    ],
+    "vim.sneak": true,
+    // "workbench.colorCustomizations": {
+    //     "statusBar.background": "#005f5f",
+    //     "statusBar.noFolderBackground": "#005f5f",
+    //     "statusBar.debuggingBackground": "#005f5f"
+    // },
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "vim.autoSwitchInputMethod.enable": true,
+    "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
+    "doxdocgen.generic.authorName": "CalaW",
+    "doxdocgen.generic.useGitUserEmail": true,
+    "doxdocgen.generic.useGitUserName": true,
+    "doxdocgen.file.copyrightTag": [],
+    "editor.lineNumbers": "relative",
+    "editor.minimap.renderCharacters": false,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "jupyter.askForKernelRestart": false,
+    "editor.guides.bracketPairs": true,
+    "git.autofetch": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "settingsSync.ignoredSettings": [
+        "vim.autoSwitchInputMethod.defaultIM",
+        "vim.autoSwitchInputMethod.obtainIMCmd",
+        "vim.autoSwitchInputMethod.switchIMCmd",
+        "vim.autoSwitchInputMethod.enable"
+    ],
+    "C_Cpp.default.includePath": [
+        "/opt/homebrew/include/eigen3",
+        "/opt/homebrew/include"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+              "j"
+            ],
+            "after": [
+              "g",
+              "j"
+            ]
+          },
+          {
+            "before": [
+              "k"
+            ],
+            "after": [
+              "g",
+              "k"
+            ]
+          }
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.texcount.autorun": "onSave",
+    "zenMode.hideTabs": false,
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "github.gitProtocol": "ssh",
+    "editor.inlineSuggest.enabled": true,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "redhat.telemetry.enabled": false,
+    "workbench.colorTheme": "Dracula Pro",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.vrb",
+        "*.xdv",
+        "*.synctex.gz",
+        "*.bcf",
+        "*.run.xml",
+        "_minted-*/*",
+        "_minted-*/"
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": true
+    },
+    "editor.fontFamily": "hack, 思源黑体",
+    // "editor.fontFamily": "SF Mono, 苹方",
+    // "editor.fontFamily": "SF Mono, 思源黑体",
+
+    // "editor.fontFamily": "MesloLGS Nerd Font Mono, 思源黑体",
+
+    // "editor.fontFamily": "Source Code Pro, 思源黑体",
+    // "editor.fontFamily": "Menlo, 思源黑体",
+    // "editor.fontFamily": "Monaco, 思源黑体",
+
+    // "editor.fontFamily": "Fira Code, 思源黑体",
+    // "editor.fontLigatures": true,
+
+    // "editor.fontFamily": "MonoLisa, 思源黑体",
+    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on",
+
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "omnisharp.useModernNet": false,
+    "omnisharp.useGlobalMono": "always",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+}
