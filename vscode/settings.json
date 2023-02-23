@@ -1,12 +1,7 @@
 {
     "files.autoSave": "afterDelay",
-    "editor.fontSize": 17,
-    "polacode.transparentBackground": true,
-    "polacode.backgroundColor": "#ffffff",
     "terminal.integrated.fontSize": 16,
-    "todo-tree.tree.showScanModeButton": false,
     "[cpp]": {
-
         "editor.wordBasedSuggestions": true,
         "editor.suggest.insertMode": "replace",
         "editor.semanticHighlighting.enabled": true
@@ -17,13 +12,14 @@
             "name": "latexmk-XeLaTeX",
             "command": "latexmk",
             "args": [
-             "-pdfxe",
-             "-bibtex",
-             "-synctex=1",
-             "-shell-escape",
-             "-interaction=nonstopmode",
-             "-file-line-error",
-             "%DOCFILE%"
+                "-pdfxe",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
             ],
             "env": {}
         },
@@ -31,19 +27,19 @@
             "name": "latexmk-pdfLaTeX",
             "command": "latexmk",
             "args": [
-             "-pdf",
-             "-bibtex",
-             "-synctex=1",
-             "-shell-escape",
-             "-interaction=nonstopmode",
-             "-file-line-error",
-             "%DOCFILE%"
+                "-pdf",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
             ],
             "env": {}
         },
         {
             // 编译工具和命令
-            "name": "xelatex",
+            "name": "XeLaTeX",
             "command": "xelatex",
             "args": [
                 "-synctex=1",
@@ -54,7 +50,7 @@
             ]
         },
         {
-            "name": "pdflatex",
+            "name": "pdfLaTeX",
             "command": "pdflatex",
             "args": [
                 "-synctex=1",
@@ -80,36 +76,36 @@
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "XeLaTeXmk",
+            "name": "latexmk-XeLaTeX",
             "tools": [
-                "XeLaTeXmk"
+                "latexmk-XeLaTeX"
             ]
         },
         {
-            "name": "PDFLaTeXmk",
+            "name": "latexmk-pdfLaTeX",
             "tools": [
-                "PDFLaTeXmk"
+                "latexmk-pdfLaTeX"
             ]
         },
         {
-            "name": "xelatex",
+            "name": "XeLaTeX",
             "tools": [
-                "xelatex"
+                "XeLaTeX"
             ],
         },
         {
-            "name": "pdflatex",
+            "name": "pdfLaTeX",
             "tools": [
-                "pdflatex"
+                "pdfLaTeX"
             ]
         },
         {
             "name": "xe->bib->xe->xe",
             "tools": [
-                "xelatex",
+                "XeLaTeX",
                 "bibtex",
-                "xelatex",
-                "xelatex"
+                "XeLaTeX",
+                "XeLaTeX"
             ]
         }
     ],
@@ -118,6 +114,7 @@
     "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
     "latex-workshop.view.pdf.external.synctex.args": [
         "-r",
+        // "-b", //highlight, ugly
         "%LINE%",
         "%PDF%",
         "%TEX%"
@@ -176,29 +173,25 @@
         "/opt/homebrew/include"
     ],
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.unicodeHighlight.allowedLocales": {
-        "zh-hans": true,
-        "zh-hant": true
-    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
-              "j"
+                "j"
             ],
             "after": [
-              "g",
-              "j"
+                "g",
+                "j"
             ]
-          },
-          {
+        },
+        {
             "before": [
-              "k"
+                "k"
             ],
             "after": [
-              "g",
-              "k"
+                "g",
+                "k"
             ]
-          }
+        }
     ],
     "latex-workshop.latex.autoClean.run": "onFailed",
     "latex-workshop.latex.recipe.default": "lastUsed",
@@ -240,7 +233,7 @@
         "*.synctex.gz",
         "*.bcf",
         "*.run.xml",
-        "_minted-*/*",
+        "_minted-*/**",
         "_minted-*/"
     ],
     "github.copilot.enable": {
@@ -249,21 +242,30 @@
         "plaintext": false,
         "markdown": true
     },
-    "editor.fontFamily": "hack, 思源黑体",
+    // "editor.fontFamily": "Hack, 思源黑体",
+    // "editor.fontFamily": "Hacc Nerd Font Mono, 思源黑体",
+    // "editor.fontFamily": "JetBrains Mono, 思源黑体",
     // "editor.fontFamily": "SF Mono, 苹方",
     // "editor.fontFamily": "SF Mono, 思源黑体",
-
+    // "editor.fontFamily": "IBM Plex Mono, 思源黑体",
     // "editor.fontFamily": "MesloLGS Nerd Font Mono, 思源黑体",
-
     // "editor.fontFamily": "Source Code Pro, 思源黑体",
+    // "editor.fontFamily": "思源等宽",
     // "editor.fontFamily": "Menlo, 思源黑体",
     // "editor.fontFamily": "Monaco, 思源黑体",
-
+    // "editor.fontFamily": "JuliaMono",
+    // "editor.fontLigatures": "'calt' on, 'zero', 'ss01'",
     // "editor.fontFamily": "Fira Code, 思源黑体",
     // "editor.fontLigatures": true,
 
-    // "editor.fontFamily": "MonoLisa, 思源黑体",
-    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on",
+    // MONOLISA settings
+    "editor.fontFamily": "MonoLisa, 思源黑体",
+    "editor.lineHeight": 0,
+    "editor.fontVariations": true,
+    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on",
+    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on, 'ss04' on",
+    // "editor.fontLigatures": "'calt' off, 'liga' off, 'zero' on, 'ss04' on",
+    // end MONOLISA settings
 
     "editor.unicodeHighlight.invisibleCharacters": false,
     "omnisharp.useModernNet": false,
@@ -272,4 +274,41 @@
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
+    "latex-workshop.linting.chktex.exec.args": [
+        "-wall",
+        "-n22",
+        "-n30",
+        "-e16",
+        "-q",
+        "-n19"
+    ],
+    "[python]": {
+    },
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": false,
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.intellisense.package.extra": [
+        "minted",
+        "unicode-math",
+        "amsmath",
+        "amssymb",
+        "amsthm",
+        "mathtools",
+        "siunitx",
+        "booktabs",
+        "xcolor",
+        "hyperref",
+        "biblatex"
+    ],
+    "latex-workshop.linting.lacheck.enabled": true,
+    "editor.renderWhitespace": "trailing",
+    "terminal.integrated.fontFamily": "SFMono Nerd Font Mono",
+    "editor.fontSize": 17,
 }

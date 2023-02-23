@@ -8,15 +8,18 @@
     ~/.alacritty.yml: alacritty.yml
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/Library/Application\ Support/Code/User/settings.json:
-      create: true
-      path: vscode/settings.json
+    ~/.config/nvim/:
+      glob: true
+      path: nvim/*
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/Library/Application Support/Code/User/settings.json:
+      create: true
+      path: vscode/settings.json
     ~/.p10k.zsh: p10k.zsh
     ~/.Rprofile: Rprofile
-    ~/.ssh/config: ssh/config
+    # ~/.ssh/config: ssh/config
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zprofile: zprofile

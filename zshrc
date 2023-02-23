@@ -29,7 +29,9 @@ export EDITOR='vim'
 # export TERM=xtrem-256color
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export PATH=$PATH:"/opt/homebrew/Cellar/mono/6.12.0.182/bin"
+#export PATH=$PATH:"/opt/homebrew/Cellar/mono/6.12.0.182/bin"
+
+export PATH="/Users/calaw/.local/bin:$PATH"
 
 # themes
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
@@ -86,6 +88,8 @@ bindkey '^[[B' history-substring-search-down
 
 eval $(thefuck --alias)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+fpath+=~/.func
 
 # The following lines were added by compinstall
 
