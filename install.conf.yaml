@@ -8,11 +8,12 @@
     ~/.alacritty.yml: alacritty.yml
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/.config/nvim/lua:
+    ~/.config/nvim/lua/:
       create: true
-      glob: true
-      path: nvim/lua/*
+      # glob: true
+      path: nvim/lua/
     ~/.config/nvim/init.lua: nvim/init.lua
+    ~/.config/zellij/config.kdl: zellij/config.kdl
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore

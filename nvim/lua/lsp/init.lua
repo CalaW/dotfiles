@@ -8,6 +8,7 @@ local servers = {
     lua_ls = require("lsp.config.lua_ls"),
     pyright = require("lsp.config.pyright"),
     texlab = require("lsp.config.texlab"),
+    clangd = require("lsp.config.clangd")
 }
 
 for name, config in pairs(servers) do
