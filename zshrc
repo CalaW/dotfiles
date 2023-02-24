@@ -39,10 +39,14 @@ export BAT_THEME="Nord"
 
 # alias brew="arch -arm64 brew"
 alias ls='exa'
-alias ll='exa -la'
+alias ll='exa -lah' # --header, maybe lsd is alternative(with icon)
 alias cat='bat'
+alias top='btm'
 alias htop='btm'
-alias rm="trash"
+alias rm='trash'
+alias grep='rg'
+alias du='dust' # disk usage
+alias find='fd'
 alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
 alias manpdf='func(){man -t $1 | open -fa Skim.app;};func'
 alias myip="curl https://ipinfo.io/json"
@@ -50,7 +54,7 @@ alias msupdate-disable='chmod 000 /Library/Application\ Support/Microsoft/MAU2.0
 alias msupdate-enable='chmod 007 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app && open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
 alias sudo='sudo '
 
-# prints the path of the front Finder window. enter Home if no window open
+# prints the path of the front Finder window. Enter Home if no window open
 function pwdf () {
     osascript <<EOS
         tell application "Finder"
