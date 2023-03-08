@@ -25,12 +25,11 @@ export LC_ALL="en_US.UTF-8"
 
 export CPLUS_INCLUDE_PATH=/opt/homebrew/include/eigen3 #eigen library
 
-export EDITOR='vim'
+export EDITOR='nvim'
 # export TERM=xtrem-256color
 
-export HOMEBREW_NO_AUTO_UPDATE=1
-#export PATH=$PATH:"/opt/homebrew/Cellar/mono/6.12.0.182/bin"
-
+# export HOMEBREW_NO_AUTO_UPDATE=1
+export NEOVIDE_FRAME='none'
 export PATH="/Users/calaw/.local/bin:$PATH"
 
 # themes
@@ -39,7 +38,7 @@ export BAT_THEME="Nord"
 
 # alias brew="arch -arm64 brew"
 alias ls='exa'
-alias ll='exa -lah' # --header, maybe lsd is alternative(with icon)
+alias ll='exa -lahF --git' # --header, maybe lsd is alternative(with icon)
 alias cat='bat'
 alias top='btm'
 alias htop='btm'

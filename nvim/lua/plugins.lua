@@ -98,6 +98,8 @@ packer.startup({
             end,
         })
 
+        use("wakatime/vim-wakatime")
+
         --------------- LSP ---------------
         use("neovim/nvim-lspconfig") -- lsp config
         use("hrsh7th/nvim-cmp") -- cmp engine

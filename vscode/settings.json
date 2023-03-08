@@ -12,13 +12,27 @@
             "name": "latexmk-XeLaTeX",
             "command": "latexmk",
             "args": [
-                "-pdfxe",
+                "-xelatex",
                 "-bibtex",
                 "-synctex=1",
                 "-shell-escape",
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk-luaLaTeX",
+            "command": "latexmk",
+            "args": [
+                "-lualatex",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
                 "%DOCFILE%"
             ],
             "env": {}
@@ -37,77 +51,26 @@
             ],
             "env": {}
         },
-        {
-            // 编译工具和命令
-            "name": "XeLaTeX",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-shell-escape",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "pdfLaTeX",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "biber",
-            "command": "biber",
-            "args": [
-                "%DOCFILE%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        }
     ],
     "latex-workshop.latex.recipes": [
         {
-            "name": "latexmk-XeLaTeX",
+            "name": "XeLaTeX",
             "tools": [
                 "latexmk-XeLaTeX"
             ]
         },
         {
-            "name": "latexmk-pdfLaTeX",
+            "name": "luaLaTeX",
             "tools": [
-                "latexmk-pdfLaTeX"
+                "latexmk-luaLaTeX"
             ]
-        },
-        {
-            "name": "XeLaTeX",
-            "tools": [
-                "XeLaTeX"
-            ],
         },
         {
             "name": "pdfLaTeX",
             "tools": [
-                "pdfLaTeX"
+                "latexmk-pdfLaTeX"
             ]
         },
-        {
-            "name": "xe->bib->xe->xe",
-            "tools": [
-                "XeLaTeX",
-                "bibtex",
-                "XeLaTeX",
-                "XeLaTeX"
-            ]
-        }
     ],
     "latex-workshop.view.pdf.viewer": "external",
     "latex-workshop.latex.autoBuild.run": "never",
@@ -124,7 +87,6 @@
         "0",
         "%PDF%",
     ],
-    "vim.easymotion": true,
     "terminal.external.osxExec": "Alacritty.app",
     "debug.console.fontSize": 16,
     "todo-tree.general.tags": [
@@ -193,6 +155,24 @@
             ]
         }
     ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
     "latex-workshop.latex.autoClean.run": "onFailed",
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.texcount.autorun": "onSave",
@@ -259,7 +239,9 @@
     // "editor.fontLigatures": true,
 
     // MONOLISA settings
-    "editor.fontFamily": "MonoLisa, 思源黑体",
+    // "editor.fontFamily": "MonoLisa, 思源黑体",
+    "editor.fontFamily": "MonoLisa, 苹方",
+    // "editor.fontFamily": "MonoLisa, FZYOUHK_508R--GBK1-0",
     "editor.lineHeight": 0,
     "editor.fontVariations": true,
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on",
@@ -272,7 +254,10 @@
     "omnisharp.useGlobalMono": "always",
     "C_Cpp.intelliSenseEngine": "disabled",
     "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
+        "asvetliakov.vscode-neovim": 1,
+        "vscodevim.vim": 1,
+        "GitHub.copilot": 2,
+        "GitHub.copilot-labs": 2
     },
     "latex-workshop.linting.chktex.exec.args": [
         "-wall",
@@ -283,6 +268,7 @@
         "-n19"
     ],
     "[python]": {
+        "editor.formatOnType": true
     },
     "editor.unicodeHighlight.allowedLocales": {
         "zh-hans": true,
@@ -311,4 +297,7 @@
     "editor.renderWhitespace": "trailing",
     "terminal.integrated.fontFamily": "SFMono Nerd Font Mono",
     "editor.fontSize": 17,
+    "vim.enableNeovim": true,
+    "editor.accessibilitySupport": "off",
+    "editor.wordWrap": "on",
 }
