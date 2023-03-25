@@ -268,7 +268,8 @@
         "-n19"
     ],
     "[python]": {
-        "editor.formatOnType": true
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.python"
     },
     "editor.unicodeHighlight.allowedLocales": {
         "zh-hans": true,
@@ -299,5 +300,4 @@
     "editor.fontSize": 17,
     "vim.enableNeovim": true,
     "editor.accessibilitySupport": "off",
-    "editor.wordWrap": "on",
 }
