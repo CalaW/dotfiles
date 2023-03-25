@@ -14,6 +14,7 @@ treesitter.setup({
 		"lua",
 		"latex",
 		"c",
+        "help",
 		"python",
 		"cpp",
 		"markdown",

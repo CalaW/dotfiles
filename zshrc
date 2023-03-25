@@ -31,10 +31,17 @@ export EDITOR='nvim'
 # export HOMEBREW_NO_AUTO_UPDATE=1
 export NEOVIDE_FRAME='none'
 export PATH="/Users/calaw/.local/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 
 # themes
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
 export BAT_THEME="Nord"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
 
 # alias brew="arch -arm64 brew"
 alias ls='exa'
@@ -47,11 +54,13 @@ alias grep='rg'
 alias du='dust' # disk usage
 alias find='fd'
 alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
-alias manpdf='func(){man -t $1 | open -fa Skim.app;};func'
 alias myip="curl https://ipinfo.io/json"
-alias msupdate-disable='chmod 000 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
-alias msupdate-enable='chmod 007 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app && open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
-alias sudo='sudo '
+alias msupdate-disable='sudo chmod 000 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
+alias msupdate-enable='sudo chmod 007 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app && open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
+
+function manpdf () {
+    man -t "$1" | open -fa Skim.app
+}
 
 # prints the path of the front Finder window. Enter Home if no window open
 function pwdf () {
@@ -70,8 +79,12 @@ EOS
 alias cdf='cd "$(pwdf)"'
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+# source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   #autoload -Uz compinit
