@@ -8,8 +8,8 @@ fi
 setopt NO_CASE_GLOB         #case-insensitive globbing
 setopt AUTO_CD              #cd when directly enter path
 setopt SHARE_HISTORY        #share history across multiple sessions
-setopt APPEND_HISTORY       #append to history
-#setopt HIST_EXPIRE_DUPS_FIRST   #expire duplicate commands first 
+setopt INC_APPEND_HISTORY       #immediately append to history
+setopt HIST_EXPIRE_DUPS_FIRST   #expire duplicate commands first 
 setopt HIST_IGNORE_ALL_DUPS #ignore all dups
 setopt HIST_FIND_NO_DUPS    #ignore dups when searching
 setopt HIST_REDUCE_BLANKS   #remove blank lines in history
@@ -19,6 +19,9 @@ setopt CORRECT_ALL          #enable auto-correct with command and argument
 #setopt CORRECT              #enable auto-correct with command
 
 bindkey -v #vim like shell
+
+export HISTSIZE=65535
+export SAVEHIST=$HISTSIZE
 
 export LANG="zh_CN.UTF-8"
 export LC_ALL="en_US.UTF-8"
