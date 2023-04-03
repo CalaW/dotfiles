@@ -1,190 +1,105 @@
 {
-    "files.autoSave": "afterDelay",
-    "terminal.integrated.fontSize": 16,
     "[cpp]": {
-        "editor.wordBasedSuggestions": true,
+        "editor.semanticHighlighting.enabled": true,
         "editor.suggest.insertMode": "replace",
-        "editor.semanticHighlighting.enabled": true
+        "editor.wordBasedSuggestions": true
     },
-    // "latex-workshop.view.pdf.viewer": "tab",
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk-XeLaTeX",
-            "command": "latexmk",
-            "args": [
-                "-xelatex",
-                "-bibtex",
-                "-synctex=1",
-                "-shell-escape",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-outdir=%OUTDIR%",
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "latexmk-luaLaTeX",
-            "command": "latexmk",
-            "args": [
-                "-lualatex",
-                "-bibtex",
-                "-synctex=1",
-                "-shell-escape",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "latexmk-pdfLaTeX",
-            "command": "latexmk",
-            "args": [
-                "-pdf",
-                "-bibtex",
-                "-synctex=1",
-                "-shell-escape",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-    ],
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "XeLaTeX",
-            "tools": [
-                "latexmk-XeLaTeX"
-            ]
-        },
-        {
-            "name": "luaLaTeX",
-            "tools": [
-                "latexmk-luaLaTeX"
-            ]
-        },
-        {
-            "name": "pdfLaTeX",
-            "tools": [
-                "latexmk-pdfLaTeX"
-            ]
-        },
-    ],
-    "latex-workshop.view.pdf.viewer": "external",
-    "latex-workshop.latex.autoBuild.run": "never",
-    "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
-    "latex-workshop.view.pdf.external.synctex.args": [
-        "-r",
-        // "-b", //highlight, ugly
-        "%LINE%",
-        "%PDF%",
-        "%TEX%"
-    ],
-    "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
-    "latex-workshop.view.pdf.external.viewer.args": [
-        "0",
-        "%PDF%",
-    ],
-    "terminal.external.osxExec": "Alacritty.app",
-    "debug.console.fontSize": 16,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "KEY POINT",
-        "NOTE"
-    ],
-    "vim.sneak": true,
-    // "workbench.colorCustomizations": {
-    //     "statusBar.background": "#005f5f",
-    //     "statusBar.noFolderBackground": "#005f5f",
-    //     "statusBar.debuggingBackground": "#005f5f"
-    // },
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
-    "vim.autoSwitchInputMethod.enable": true,
-    "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
-    "doxdocgen.generic.authorName": "CalaW",
-    "doxdocgen.generic.useGitUserEmail": true,
-    "doxdocgen.generic.useGitUserName": true,
-    "doxdocgen.file.copyrightTag": [],
-    "editor.lineNumbers": "relative",
-    "editor.minimap.renderCharacters": false,
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true
     },
-    "jupyter.askForKernelRestart": false,
-    "editor.guides.bracketPairs": true,
-    "git.autofetch": true,
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.cStandard": "c17",
-    "settingsSync.ignoredSettings": [
-        "vim.autoSwitchInputMethod.defaultIM",
-        "vim.autoSwitchInputMethod.obtainIMCmd",
-        "vim.autoSwitchInputMethod.switchIMCmd",
-        "vim.autoSwitchInputMethod.enable"
-    ],
     "C_Cpp.default.includePath": [
         "/opt/homebrew/include/eigen3",
         "/opt/homebrew/include"
     ],
-    "security.workspace.trust.untrustedFiles": "open",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j"
-            ],
-            "after": [
-                "g",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "k"
-            ],
-            "after": [
-                "g",
-                "k"
-            ]
-        }
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cSpell.userWords": [
+        "matplotlib",
+        "pyplot",
+        "sklearn",
+        "Tsinghua"
     ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "latex-workshop.latex.autoClean.run": "onFailed",
-    "latex-workshop.latex.recipe.default": "lastUsed",
-    "latex-workshop.texcount.autorun": "onSave",
-    "zenMode.hideTabs": false,
-    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-    "github.gitProtocol": "ssh",
+    "debug.console.fontSize": 16,
+    "doxdocgen.file.copyrightTag": [],
+    "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
+    "doxdocgen.generic.authorName": "CalaW",
+    "doxdocgen.generic.useGitUserEmail": true,
+    "doxdocgen.generic.useGitUserName": true,
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": true,
+    // "editor.fontFamily": "Hack, 思源黑体",
+    // "editor.fontFamily": "Hacc Nerd Font Mono, 思源黑体",
+    // "editor.fontFamily": "JetBrains Mono, 思源黑体",
+    // "editor.fontFamily": "SF Mono, 苹方",
+    // "editor.fontFamily": "SF Mono, 思源黑体",
+    // "editor.fontFamily": "IBM Plex Mono, 思源黑体",
+    // "editor.fontFamily": "MesloLGS Nerd Font Mono, 思源黑体",
+    // "editor.fontFamily": "Source Code Pro, 思源黑体",
+    // "editor.fontFamily": "思源等宽",
+    // "editor.fontFamily": "Menlo, 思源黑体",
+    // "editor.fontFamily": "Monaco, 思源黑体",
+    // "editor.fontFamily": "JuliaMono",
+    // "editor.fontLigatures": "'calt' on, 'zero', 'ss01'",
+    // "editor.fontFamily": "Fira Code, 思源黑体",
+    // "editor.fontLigatures": true,
+    // MONOLISA settings
+    // "editor.fontFamily": "MonoLisa, 思源黑体",
+    "editor.fontFamily": "MonoLisa, 苹方",
+    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on",
+    "editor.fontSize": 17,
+    "editor.fontVariations": true,
+    "editor.guides.bracketPairs": true,
     "editor.inlineSuggest.enabled": true,
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
+    // "editor.fontFamily": "MonoLisa, FZYOUHK_508R--GBK1-0",
+    "editor.lineHeight": 0,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.renderCharacters": false,
+    "editor.renderWhitespace": "trailing",
+    "editor.unicodeHighlight.allowedLocales": {
+        "zh-hans": true,
+        "zh-hant": true
     },
-    "redhat.telemetry.enabled": false,
-    "workbench.colorTheme": "Dracula Pro",
+    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on, 'ss04' on",
+    // "editor.fontLigatures": "'calt' off, 'liga' off, 'zero' on, 'ss04' on",
+    // end MONOLISA settings
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1,
+        "GitHub.copilot": 2,
+        "GitHub.copilot-labs": 2,
+        "vscodevim.vim": 1
+    },
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "git.enableCommitSigning": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": false,
+        "yaml": false
+    },
+    "github.gitProtocol": "ssh",
+    "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+    "jupyter.askForKernelRestart": false,
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.intellisense.package.extra": [
+        "minted",
+        "unicode-math",
+        "amsmath",
+        "amssymb",
+        "amsthm",
+        "mathtools",
+        "siunitx",
+        "booktabs",
+        "xcolor",
+        "hyperref",
+        "biblatex"
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onFailed",
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
         "*.bbl",
@@ -216,49 +131,73 @@
         "_minted-*/**",
         "_minted-*/"
     ],
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": true
-    },
-    // "editor.fontFamily": "Hack, 思源黑体",
-    // "editor.fontFamily": "Hacc Nerd Font Mono, 思源黑体",
-    // "editor.fontFamily": "JetBrains Mono, 思源黑体",
-    // "editor.fontFamily": "SF Mono, 苹方",
-    // "editor.fontFamily": "SF Mono, 思源黑体",
-    // "editor.fontFamily": "IBM Plex Mono, 思源黑体",
-    // "editor.fontFamily": "MesloLGS Nerd Font Mono, 思源黑体",
-    // "editor.fontFamily": "Source Code Pro, 思源黑体",
-    // "editor.fontFamily": "思源等宽",
-    // "editor.fontFamily": "Menlo, 思源黑体",
-    // "editor.fontFamily": "Monaco, 思源黑体",
-    // "editor.fontFamily": "JuliaMono",
-    // "editor.fontLigatures": "'calt' on, 'zero', 'ss01'",
-    // "editor.fontFamily": "Fira Code, 思源黑体",
-    // "editor.fontLigatures": true,
-
-    // MONOLISA settings
-    // "editor.fontFamily": "MonoLisa, 思源黑体",
-    "editor.fontFamily": "MonoLisa, 苹方",
-    // "editor.fontFamily": "MonoLisa, FZYOUHK_508R--GBK1-0",
-    "editor.lineHeight": 0,
-    "editor.fontVariations": true,
-    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on",
-    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on, 'ss04' on",
-    // "editor.fontLigatures": "'calt' off, 'liga' off, 'zero' on, 'ss04' on",
-    // end MONOLISA settings
-
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "omnisharp.useModernNet": false,
-    "omnisharp.useGlobalMono": "always",
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1,
-        "vscodevim.vim": 1,
-        "GitHub.copilot": 2,
-        "GitHub.copilot-labs": 2
-    },
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "latexmk-XeLaTeX"
+            ]
+        },
+        {
+            "name": "luaLaTeX",
+            "tools": [
+                "latexmk-luaLaTeX"
+            ]
+        },
+        {
+            "name": "pdfLaTeX",
+            "tools": [
+                "latexmk-pdfLaTeX"
+            ]
+        },
+    ],
+    // "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.tools": [
+        {
+            "args": [
+                "-xelatex",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk-XeLaTeX"
+        },
+        {
+            "args": [
+                "-lualatex",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk-luaLaTeX"
+        },
+        {
+            "args": [
+                "-pdf",
+                "-bibtex",
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "command": "latexmk",
+            "env": {},
+            "name": "latexmk-pdfLaTeX"
+        },
+    ],
     "latex-workshop.linting.chktex.exec.args": [
         "-wall",
         "-n22",
@@ -267,37 +206,98 @@
         "-q",
         "-n19"
     ],
-    "[python]": {
-        "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.python"
-    },
-    "editor.unicodeHighlight.allowedLocales": {
-        "zh-hans": true,
-        "zh-hant": true
-    },
+    "latex-workshop.linting.lacheck.enabled": true,
+    "latex-workshop.texcount.autorun": "onSave",
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "-r",
+        // "-b", //highlight, ugly
+        "%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "0",
+        "%PDF%",
+    ],
+    "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
+    "latex-workshop.view.pdf.viewer": "external",
+    "omnisharp.useGlobalMono": "always",
+    "omnisharp.useModernNet": false,
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredSettings": [
+        "vim.autoSwitchInputMethod.defaultIM",
+        "vim.autoSwitchInputMethod.obtainIMCmd",
+        "vim.autoSwitchInputMethod.switchIMCmd",
+        "vim.autoSwitchInputMethod.enable"
+    ],
+    "terminal.external.osxExec": "Alacritty.app",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
-    "julia.symbolCacheDownload": true,
-    "julia.enableTelemetry": false,
-    "latex-workshop.intellisense.citation.backend": "biblatex",
-    "latex-workshop.intellisense.package.extra": [
-        "minted",
-        "unicode-math",
-        "amsmath",
-        "amssymb",
-        "amsthm",
-        "mathtools",
-        "siunitx",
-        "booktabs",
-        "xcolor",
-        "hyperref",
-        "biblatex"
-    ],
-    "latex-workshop.linting.lacheck.enabled": true,
-    "editor.renderWhitespace": "trailing",
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
     "terminal.integrated.fontFamily": "SFMono Nerd Font Mono",
-    "editor.fontSize": 17,
+    "terminal.integrated.fontSize": 16,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "KEY POINT",
+        "NOTE"
+    ],
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
     "vim.enableNeovim": true,
-    "editor.accessibilitySupport": "off",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "g",
+                "j"
+            ],
+            "before": [
+                "j"
+            ]
+        },
+        {
+            "after": [
+                "g",
+                "k"
+            ],
+            "before": [
+                "k"
+            ]
+        }
+    ],
+    "vim.sneak": true,
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "workbench.colorTheme": "Dracula Pro",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "zenMode.hideTabs": false
 }

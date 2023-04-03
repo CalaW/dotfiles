@@ -1,17 +1,28 @@
 [user]
 	email = maker_cc@foxmail.com
 	name = CalaW
+	signingkey = EC5CDBBECC9BBBF8
 [init]
 	defaultBranch = main
-;[url "git@github.com:"]
-    ;insteadOf = https://github.com/
+[url "git@github.com:"]
+    insteadOf = https://github.com/
 [commit]
     verbose = true
+	gpgsign = true
 [pull]
 	rebase = false
+[fetch]
+    prune = true
 [color]
     ui = true
 [core]
-	editor = vim
+	editor = nvim
 	quotepath = false
 	excludesfile = /Users/calaw/.gitignore
+[gpg]
+	program = gpg
+[alias]
+	st = status
+	c = commit
+	lg = log
+	lgga = log --graph --decorate --oneline --abbrev-commit --all
