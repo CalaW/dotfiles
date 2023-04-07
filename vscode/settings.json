@@ -22,6 +22,7 @@
         "Tsinghua"
     ],
     "debug.console.fontSize": 16,
+    "diffEditor.diffAlgorithm": "experimental",
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
     "doxdocgen.generic.authorName": "CalaW",
@@ -29,6 +30,8 @@
     "doxdocgen.generic.useGitUserName": true,
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
     // "editor.fontFamily": "Hack, 思源黑体",
     // "editor.fontFamily": "Hacc Nerd Font Mono, 思源黑体",
     // "editor.fontFamily": "JetBrains Mono, 思源黑体",
@@ -56,6 +59,7 @@
     "editor.lineHeight": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "trailing",
     "editor.unicodeHighlight.allowedLocales": {
         "zh-hans": true,
@@ -65,6 +69,7 @@
     // "editor.fontLigatures": "'calt' off, 'liga' off, 'zero' on, 'ss04' on",
     // end MONOLISA settings
     "editor.unicodeHighlight.invisibleCharacters": false,
+    "explorer.compactFolders": false,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1,
         "GitHub.copilot": 2,
@@ -72,6 +77,8 @@
         "vscodevim.vim": 1
     },
     "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10000,
+    "files.insertFinalNewline": true,
     "git.autofetch": true,
     "git.enableCommitSigning": true,
     "github.copilot.enable": {
@@ -83,7 +90,7 @@
     "github.gitProtocol": "ssh",
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
-    "jupyter.askForKernelRestart": false,
+    "latex-workshop.bind.enter.key": false,
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.intellisense.package.extra": [
         "minted",
@@ -226,6 +233,8 @@
     "omnisharp.useModernNet": false,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "redhat.telemetry.enabled": false,
+    "scm.alwaysShowActions": true,
+    "scm.alwaysShowRepositories": true,
     "security.workspace.trust.untrustedFiles": "open",
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
@@ -233,10 +242,13 @@
         "vim.autoSwitchInputMethod.switchIMCmd",
         "vim.autoSwitchInputMethod.enable"
     ],
+    "telemetry.telemetryLevel": "error",
     "terminal.external.osxExec": "Alacritty.app",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },

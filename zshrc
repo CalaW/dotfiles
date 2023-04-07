@@ -29,6 +29,7 @@ export LC_ALL="en_US.UTF-8"
 export CPLUS_INCLUDE_PATH=/opt/homebrew/include/eigen3 #eigen library
 
 export EDITOR='nvim'
+export PAGER='bat'
 # export TERM=xtrem-256color
 
 # export HOMEBREW_NO_AUTO_UPDATE=1
