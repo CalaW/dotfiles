@@ -4,168 +4,6 @@
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": true
     },
-    "[latex]": {
-        "vim.insertModeKeyBindings": [
-            {
-                "before": [
-                    "]",
-                    "]"
-                ],
-                "commands": [
-                    "latex-workshop.close-env"
-                ],
-                "silent": true
-            }
-        ],
-        "vim.normalModeKeyBindingsNonRecursive": [
-            {
-                "after": [
-                    "i"
-                ],
-                "before": [
-                    "c",
-                    "s",
-                    "e"
-                ],
-                "commands": [
-                    "latex-workshop.select-envname"
-                ],
-                "silent": true
-            },
-            {
-                "before": [
-                    "v",
-                    "i",
-                    "e"
-                ],
-                "commands": [
-                    "latex-workshop.select-envcontent"
-                ],
-                "silent": true
-            },
-            {
-                "before": [
-                    "v",
-                    "a",
-                    "e"
-                ],
-                "commands": [
-                    "latex-workshop.select-env"
-                ],
-                "silent": true
-            },
-            {
-                "after": [
-                    "F",
-                    "\\",
-                    "d",
-                    "f",
-                    "{",
-                    "f",
-                    "}",
-                    "x"
-                ],
-                "before": [
-                    "d",
-                    "s",
-                    "c"
-                ]
-            },
-            {
-                "after": [
-                    "F",
-                    "\\",
-                    "l",
-                    "c",
-                    "w"
-                ],
-                "before": [
-                    "c",
-                    "s",
-                    "c"
-                ]
-            },
-            {
-                "before": [
-                    "t",
-                    "s",
-                    "$"
-                ],
-                "commands": [
-                    "latex-workshop.toggle-equation-envname"
-                ],
-                "silent": true
-            },
-            /* curently not working, may be related to vscode commands issue
-            {
-                "before": ["d", "s", "e"],
-                "commands": [
-                    "latex-workshop.select-envname",
-                    "editor.action.deleteLines"
-                ],
-                "silent": true
-            }, */
-            /*             {
-                "before": ["d", "i", "e"],
-                "commands": [
-                    "latex-workshop.select-envcontent",
-                    "editor.action.deleteLines"
-                ],
-                "silent": true
-            }, */
-            {
-                "before": [
-                    "<leader>",
-                    "l",
-                    "l"
-                ],
-                "commands": [
-                    "latex-workshop.build"
-                ],
-                "silent": true
-            },
-            {
-                "before": [
-                    "<leader>",
-                    "l",
-                    "k"
-                ],
-                "commands": [
-                    "latex-workshop.kill"
-                ]
-                // "silent": true
-            },
-            {
-                "before": [
-                    "<leader>",
-                    "l",
-                    "c"
-                ],
-                "commands": [
-                    "latex-workshop.clean"
-                ],
-                "silent": true
-            },
-            {
-                "after": [
-                    "g",
-                    "j"
-                ],
-                "before": [
-                    "j"
-                ]
-            },
-            {
-                "after": [
-                    "g",
-                    "k"
-                ],
-                "before": [
-                    "k"
-                ]
-            }
-        ]
-    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true
@@ -394,8 +232,6 @@
     ],
     "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
     "latex-workshop.view.pdf.viewer": "external",
-    "omnisharp.useGlobalMono": "always",
-    "omnisharp.useModernNet": false,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "redhat.telemetry.enabled": false,
     "scm.alwaysShowActions": true,
@@ -435,7 +271,147 @@
     "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
     "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
     "vim.enableNeovim": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "]",
+                "]"
+            ],
+            "commands": [
+                "latex-workshop.close-env"
+            ],
+            "silent": true
+        }
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "i"
+            ],
+            "before": [
+                "c",
+                "s",
+                "e"
+            ],
+            "commands": [
+                "latex-workshop.select-envname"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "v",
+                "i",
+                "e"
+            ],
+            "commands": [
+                "latex-workshop.select-envcontent"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "v",
+                "a",
+                "e"
+            ],
+            "commands": [
+                "latex-workshop.select-env"
+            ],
+            "silent": true
+        },
+        {
+            "after": [
+                "F",
+                "\\",
+                "d",
+                "f",
+                "{",
+                "f",
+                "}",
+                "x"
+            ],
+            "before": [
+                "d",
+                "s",
+                "c"
+            ]
+        },
+        {
+            "after": [
+                "F",
+                "\\",
+                "l",
+                "c",
+                "w"
+            ],
+            "before": [
+                "c",
+                "s",
+                "c"
+            ]
+        },
+        {
+            "before": [
+                "t",
+                "s",
+                "$"
+            ],
+            "commands": [
+                "latex-workshop.toggle-equation-envname"
+            ],
+            "silent": true
+        },
+        /* curently not working, may be related to vscode commands issue
+            {
+                "before": ["d", "s", "e"],
+                "commands": [
+                    "latex-workshop.select-envname",
+                    "editor.action.deleteLines"
+                ],
+                "silent": true
+            }, */
+        /*             {
+                "before": ["d", "i", "e"],
+                "commands": [
+                    "latex-workshop.select-envcontent",
+                    "editor.action.deleteLines"
+                ],
+                "silent": true
+            }, */
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "l"
+            ],
+            "commands": [
+                "latex-workshop.build"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "k"
+            ],
+            "commands": [
+                "latex-workshop.kill"
+            ]
+            // "silent": true
+        },
+        {
+            "before": [
+                "<leader>",
+                "l",
+                "c"
+            ],
+            "commands": [
+                "latex-workshop.clean"
+            ],
+            "silent": true
+        },
         {
             "after": [
                 "g",
