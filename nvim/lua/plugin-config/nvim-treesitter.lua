@@ -14,7 +14,6 @@ treesitter.setup({
 		"lua",
 		"latex",
 		"c",
-        "help",
 		"python",
 		"cpp",
 		"markdown",
@@ -23,6 +22,7 @@ treesitter.setup({
 	},
 	highlight = {
 		enable = true,
+        disable = {"latex"},
 		additional_vim_regex_highlighting = false,
 	},
 	indent = {

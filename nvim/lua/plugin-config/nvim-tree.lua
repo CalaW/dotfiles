@@ -4,7 +4,8 @@ if not status then
     return
 end
 
-local list_keys = require('keybindings').nvimTreeList
+local on_attach = require("keybindings").nvimTreeOnAttach
+
 nvim_tree.setup({
     git = {
         enable = true,
@@ -23,10 +24,6 @@ nvim_tree.setup({
         width = 30,
         side = 'left',
         -- hide_root_folder = false,
-        mappings = {
-            custom_only = false,
-            list = list_keys,
-        },
         -- 不显示行数
         -- number = false,
         -- relativenumber = false,
@@ -45,6 +42,7 @@ nvim_tree.setup({
     system_open = {
         cmd = 'open',
     },
+    on_attach = on_attach,
 })
 -- 自动关闭
 -- vim.cmd([[

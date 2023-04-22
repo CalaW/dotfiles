@@ -4,6 +4,12 @@
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": true
     },
+    "[latex]": {
+        "editor.formatOnPaste": false,
+        "editor.indentSize": 2,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.tabSize": 2
+    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true
@@ -19,6 +25,7 @@
     "cSpell.userWords": [
         "matplotlib",
         "pyplot",
+        "scipy",
         "sklearn",
         "Tsinghua"
     ],
@@ -32,7 +39,6 @@
     "doxdocgen.generic.useGitUserName": true,
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
-    "editor.codeLens": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
     // "editor.fontFamily": "Hack, 思源黑体",
@@ -64,6 +70,10 @@
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "trailing",
+    "editor.unicodeHighlight.allowedCharacters": {
+        "α": true,
+        "σ": true
+    },
     "editor.unicodeHighlight.allowedLocales": {
         "zh-hans": true,
         "zh-hant": true
@@ -106,7 +116,8 @@
         "booktabs",
         "xcolor",
         "hyperref",
-        "biblatex"
+        "biblatex",
+        "CalaWHomework"
     ],
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.autoClean.run": "onFailed",
@@ -139,7 +150,8 @@
         "*.bcf",
         "*.run.xml",
         "_minted-*/**",
-        "_minted-*/"
+        "_minted-*/",
+        "*.pyg"
     ],
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
@@ -232,6 +244,7 @@
     ],
     "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
     "latex-workshop.view.pdf.viewer": "external",
+    "notebook.lineNumbers": "on",
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "redhat.telemetry.enabled": false,
     "scm.alwaysShowActions": true,
