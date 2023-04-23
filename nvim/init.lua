@@ -1,11 +1,12 @@
 require('basic') -- Basic Settings
 require('keybindings') -- Key Bindings
-require('plugins') -- Packer Plugin Management
-require('colorscheme') -- Color Schene
+require('plugins') -- Lazy Plugin Management
 -- LSP
-require('lsp')
-require('completion')
-require('format')
+if not vim.g.vscode then
+    require('lsp')
+    require('completion')
+    require('format')
+end
 -- gui
 if vim.g.neovide then
     require("neovide")

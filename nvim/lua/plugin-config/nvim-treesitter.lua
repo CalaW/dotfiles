@@ -21,7 +21,7 @@ treesitter.setup({
 		"kdl",
 	},
 	highlight = {
-		enable = true,
+		enable = not vim.g.vscode,
         disable = {"latex"},
 		additional_vim_regex_highlighting = false,
 	},

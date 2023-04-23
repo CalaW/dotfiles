@@ -5,7 +5,3 @@ if not status then
 end
 
 leap.add_default_mappings()
-
--- leap.setup({
---     leap.add_default_mappings()
--- })

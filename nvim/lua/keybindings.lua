@@ -15,6 +15,14 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 -- map("", "<ScrollWhellUp>", "<C-Y>")
 -- map("", "<ScrollWhellDown>", "<C-E>")
 
+-- commentary in vscode
+if vim.g.vscode then
+    map("x", "gc", "<Plug>VSCodeCommentary")
+    map("n", "gc", "<Plug>VSCodeCommentary")
+    map("o", "gc", "<Plug>VSCodeCommentary")
+    map("n", "gcc", "<Plug>VSCodeCommentaryLine")
+end
+
 local pluginKeys = {}
 
 -- nvim-tree

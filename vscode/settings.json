@@ -24,6 +24,7 @@
     "C_Cpp.intelliSenseEngine": "disabled",
     "cSpell.userWords": [
         "matplotlib",
+        "neovim",
         "pyplot",
         "scipy",
         "sklearn",
