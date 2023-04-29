@@ -11,5 +11,11 @@
         "key": "k",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
-    }
+    },
+    // {
+    //     "command": "vscode-neovim.send",
+    //     "key": "]",
+    //     "when": "neovim.mode == insert && editorTextFocus",
+    //     "args": "]"
+    // }
 ]

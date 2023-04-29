@@ -1,6 +1,5 @@
 {
     "[cpp]": {
-        "editor.semanticHighlighting.enabled": true,
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": true
     },
@@ -10,19 +9,34 @@
         "editor.suggestSelection": "recentlyUsedByPrefix",
         "editor.tabSize": 2
     },
+    "[plaintext]": {
+        "editor.wordWrap": "on"
+    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true
     },
     "breadcrumbs.icons": false,
-    "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.cStandard": "c17",
-    "C_Cpp.default.includePath": [
-        "/opt/homebrew/include/eigen3",
-        "/opt/homebrew/include"
+    "clangd.arguments": [
+        "-j=12",
+        "--clang-tidy",
+        "--background-index",
+        "--all-scopes-completion",
+        "--log=verbose",
+        "--pretty",
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators",
+        "--completion-style=detailed",
+        "--pch-storage=memory",
+        "--completion-style=detailed",
+        "--fallback-style=Webkit",
+        "--function-arg-placeholders=true"
     ],
-    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.fallbackFlags": [
+        "-std=c++20"
+    ],
     "cSpell.userWords": [
+        "Eigen",
         "matplotlib",
         "neovim",
         "pyplot",
@@ -71,6 +85,7 @@
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.renderWhitespace": "trailing",
+    "editor.semanticHighlighting.enabled": true,
     "editor.unicodeHighlight.allowedCharacters": {
         "α": true,
         "σ": true
@@ -84,6 +99,7 @@
     // end MONOLISA settings
     "editor.unicodeHighlight.invisibleCharacters": false,
     "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1,
         "GitHub.copilot": 2,
@@ -98,7 +114,7 @@
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
-        "plaintext": false,
+        "plaintext": true,
         "yaml": false
     },
     "github.gitProtocol": "ssh",
@@ -468,5 +484,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
+    "workbench.layoutControl.enabled": false,
     "zenMode.hideTabs": false
 }

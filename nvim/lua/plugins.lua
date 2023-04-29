@@ -170,9 +170,12 @@ local plugins = {
         cond = not vim.g.vscode,
     },
     -- flit and leap
-    {
-        "ggandor/flit.nvim",
-    },
+    -- {
+    --     "ggandor/flit.nvim",
+    --     config = function()
+    --         require("plugin-config.flit")
+    --     end
+    -- },
     {
         "ggandor/leap.nvim",
         config = function()

@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 setopt NO_CASE_GLOB         #case-insensitive globbing
@@ -37,19 +37,20 @@ export NEOVIDE_FRAME='none'
 export PATH="/Users/calaw/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-
 # themes
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)
 export BAT_THEME="Nord"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 alias bathelp='bat --plain --language=help'
 help() {
     "$@" --help 2>&1 | bathelp
 }
-
-# alias brew="arch -arm64 brew"
 alias ls='exa'
 alias ll='exa -lahF --git' # --header, maybe lsd is alternative(with icon)
+alias mv='mv -i' # ask when override
+alias cp='cp -i' # ask when override
+alias df='df -h' # human readable disk
 alias cat='bat'
 alias top='btm'
 alias htop='btm'
@@ -57,7 +58,7 @@ alias rm='trash'
 alias grep='rg'
 alias du='dust' # disk usage
 alias find='fd'
-alias icloud="cd /Users/CalaW/Library/Mobile\ documents/com~apple~CloudDocs"
+alias icloud="cd ~/Library/Mobile\ documents/com~apple~CloudDocs"
 alias myip="curl https://ipinfo.io/json"
 alias msupdate-disable='sudo chmod 000 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
 alias msupdate-enable='sudo chmod 007 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app && open /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
@@ -90,14 +91,15 @@ ZSH_AUTOSUGGEST_STRATEGY=(history)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 # source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  #autoload -Uz compinit
-  #compinit
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    #autoload -Uz compinit
+    #compinit
 fi
 
 source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # ZVM_CURSOR_STYLE_ENABLED=false
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh') # load fzf after zvm to resolve key binding conflict
 
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
@@ -105,6 +107,9 @@ bindkey '^[[B' history-substring-search-down
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build}'
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias)
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
