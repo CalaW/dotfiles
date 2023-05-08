@@ -109,6 +109,17 @@ bindkey '^[[B' history-substring-search-down
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build}'
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+#     --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
+#     --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9
+#     --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6
+#     --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias)

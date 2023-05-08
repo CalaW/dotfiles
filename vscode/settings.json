@@ -73,8 +73,9 @@
     // "editor.fontLigatures": true,
     // MONOLISA settings
     // "editor.fontFamily": "MonoLisa, 思源黑体",
-    "editor.fontFamily": "MonoLisa, 苹方",
-    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on",
+    "editor.fontFamily": "MonoLisa variable, 苹方",
+    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss11' on, 'ss12' on",
+    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss11' on",
     "editor.fontSize": 17,
     "editor.fontVariations": true,
     "editor.guides.bracketPairs": true,
@@ -121,6 +122,7 @@
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
     "latex-workshop.bind.enter.key": false,
+    "latex-workshop.hover.preview.newcommand.newcommandFile": "/Users/calaw/Documents/Program/LaTeX-Template/CalaWMath.sty",
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.intellisense.package.extra": [
         "minted",
@@ -170,6 +172,7 @@
         "_minted-*/",
         "*.pyg"
     ],
+    "latex-workshop.latex.clean.method": "glob",
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
         {
