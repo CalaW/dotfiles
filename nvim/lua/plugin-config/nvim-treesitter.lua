@@ -18,7 +18,6 @@ treesitter.setup({
 		"cpp",
 		"markdown",
 		"markdown_inline",
-		"kdl",
 	},
 	highlight = {
 		enable = not vim.g.vscode,
