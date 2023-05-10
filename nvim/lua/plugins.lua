@@ -1,3 +1,7 @@
+local function get_config(name)
+    return function() require(string.format('plugin-config/%s', name)) end
+end
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -61,45 +65,35 @@ local plugins = {
         event = "VeryLazy",
         cond = not vim.g.vscode,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function ()
-            require("plugin-config.nvim-tree")
-        end
+        config = get_config("nvim-tree") 
     },
     {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
         cond = not vim.g.vscode,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function ()
-            require("plugin-config.bufferline")
-        end
+        config = get_config("bufferline")
     },
     {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
         cond = not vim.g.vscode,
         dependencies = { "nvim-tree/nvim-web-devicons", "arkav/lualine-lsp-progress" },
-        config = function ()
-            require("plugin-config.lualine")
-        end
+        config = get_config("lualine")
     },
     {
         "nvim-telescope/telescope.nvim",
         cmd = "Telescope",
         cond = not vim.g.vscode,
         dependencies = { "nvim-lua/plenary.nvim" },
-        config = function ()
-            require("plugin-config.telescope")
-        end
+        config = get_config("telescope")
     },
     {
         "goolord/alpha-nvim",
         event = "VimEnter",
         cond = not vim.g.vscode,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function ()
-            require("plugin-config.alpha")
-        end
+        config = get_config("alpha")
     },
     {
         "nvim-treesitter/nvim-treesitter",
@@ -128,18 +122,14 @@ local plugins = {
         --         end,
         --     },
         -- },
-        config = function ()
-            require("plugin-config.nvim-treesitter")
-        end
+        config = get_config("nvim-treesitter")
     },
     -- indent-blankline: indent guide
     {
         "lukas-reineke/indent-blankline.nvim",
         event = { "BufReadPost", "BufNewFile" },
         cond = not vim.g.vscode,
-        config = function()
-            require("plugin-config.indent-blankline")
-        end
+        config = get_config("indent-blankline")
     },
     -- toggleterm
     -- {
@@ -153,9 +143,7 @@ local plugins = {
     {
         "kylechui/nvim-surround",
         event = "VeryLazy",
-        config = function()
-            require("plugin-config.nvim-surround")
-        end
+        config = get_config("nvim-surround")
     },
     -- Comment
     {
@@ -178,9 +166,7 @@ local plugins = {
     -- },
     {
         "ggandor/leap.nvim",
-        config = function()
-            require("plugin-config.leap")
-        end
+        config = get_config("leap")
     },
     -- mini.ai, better text object
     -- {
@@ -203,58 +189,99 @@ local plugins = {
     --     end,
     --     config = function(_, opts)
     --         require("mini.ai").setup(opts)
-            -- -- register all text objects with which-key
-            -- if require("lazyvim.util").has("which-key.nvim") then
-            --     ---@type table<string, string|table>
-            --     local i = {
-            --         [" "] = "Whitespace",
-            --         ['"'] = 'Balanced "',
-            --         ["'"] = "Balanced '",
-            --         ["`"] = "Balanced `",
-            --         ["("] = "Balanced (",
-            --         [")"] = "Balanced ) including white-space",
-            --         [">"] = "Balanced > including white-space",
-            --         ["<lt>"] = "Balanced <",
-            --         ["]"] = "Balanced ] including white-space",
-            --         ["["] = "Balanced [",
-            --         ["}"] = "Balanced } including white-space",
-            --         ["{"] = "Balanced {",
-            --         ["?"] = "User Prompt",
-            --         _ = "Underscore",
-            --         a = "Argument",
-            --         b = "Balanced ), ], }",
-            --         c = "Class",
-            --         f = "Function",
-            --         o = "Block, conditional, loop",
-            --         q = "Quote `, \", '",
-            --         t = "Tag",
-            --     }
-            --     local a = vim.deepcopy(i)
-            --     for k, v in pairs(a) do
-            --         a[k] = v:gsub(" including.*", "")
-            --     end
-                
-            --     local ic = vim.deepcopy(i)
-            --     local ac = vim.deepcopy(a)
-            --     for key, name in pairs({ n = "Next", l = "Last" }) do
-            --         i[key] = vim.tbl_extend("force", { name = "Inside " .. name .. " textobject" }, ic)
-            --         a[key] = vim.tbl_extend("force", { name = "Around " .. name .. " textobject" }, ac)
-            --     end
-            --     require("which-key").register({
-            --         mode = { "o", "x" },
-            --         i = i,
-            --         a = a,
-            --     })
-            -- end
+    -- -- register all text objects with which-key
+    -- if require("lazyvim.util").has("which-key.nvim") then
+    --     ---@type table<string, string|table>
+    --     local i = {
+    --         [" "] = "Whitespace",
+    --         ['"'] = 'Balanced "',
+    --         ["'"] = "Balanced '",
+    --         ["`"] = "Balanced `",
+    --         ["("] = "Balanced (",
+    --         [")"] = "Balanced ) including white-space",
+    --         [">"] = "Balanced > including white-space",
+    --         ["<lt>"] = "Balanced <",
+    --         ["]"] = "Balanced ] including white-space",
+    --         ["["] = "Balanced [",
+    --         ["}"] = "Balanced } including white-space",
+    --         ["{"] = "Balanced {",
+    --         ["?"] = "User Prompt",
+    --         _ = "Underscore",
+    --         a = "Argument",
+    --         b = "Balanced ), ], }",
+    --         c = "Class",
+    --         f = "Function",
+    --         o = "Block, conditional, loop",
+    --         q = "Quote `, \", '",
+    --         t = "Tag",
+    --     }
+    --     local a = vim.deepcopy(i)
+    --     for k, v in pairs(a) do
+    --         a[k] = v:gsub(" including.*", "")
+    --     end
+    
+    --     local ic = vim.deepcopy(i)
+    --     local ac = vim.deepcopy(a)
+    --     for key, name in pairs({ n = "Next", l = "Last" }) do
+    --         i[key] = vim.tbl_extend("force", { name = "Inside " .. name .. " textobject" }, ic)
+    --         a[key] = vim.tbl_extend("force", { name = "Around " .. name .. " textobject" }, ac)
+    --     end
+    --     require("which-key").register({
+    --         mode = { "o", "x" },
+    --         i = i,
+    --         a = a,
+    --     })
+    -- end
     --     end,
     -- },
     -- vimtex
     {
         "lervag/vimtex",
         ft = "tex",
-        config = function()
-            require("plugin-config.vimtex")
-        end,
+        config = get_config("vimtex"),
+        keys = {
+            -- Use `i` for the item text object
+            { "ai", "<Plug>(vimtex-am)", mode = "o" },
+            { "ai", "<Plug>(vimtex-am)", mode = "x" },
+            { "ii", "<Plug>(vimtex-im)", mode = "o" },
+            { "ii", "<Plug>(vimtex-im)", mode = "x" },
+            
+            -- Use `m` for the math text object
+            { "am", "<Plug>(vimtex-a$)", mode = "o" },
+            { "am", "<Plug>(vimtex-a$)", mode = "x" },
+            { "im", "<Plug>(vimtex-i$)", mode = "o" },
+            { "im", "<Plug>(vimtex-i$)", mode = "x" },
+            { "tsm", "<Plug>(vimtex-env-toggle-math)" },
+            { "dsm", "<Plug>(vimtex-env-delete-math)" },
+            
+            -- Use `e` for environment navitation
+            { "]e", "<Plug>(vimtex-]m)", mode = "n" },
+            { "]e", "<Plug>(vimtex-]m)", mode = "x" },
+            { "]e", "<Plug>(vimtex-]m)", mode = "o" },
+            { "]E", "<Plug>(vimtex-]M)", mode = "n" },
+            { "]E", "<Plug>(vimtex-]M)", mode = "x" },
+            { "]E", "<Plug>(vimtex-]M)", mode = "o" },
+            { "[e", "<Plug>(vimtex-[m)", mode = "n" },
+            { "[e", "<Plug>(vimtex-[m)", mode = "x" },
+            { "[e", "<Plug>(vimtex-[m)", mode = "o" },
+            { "[E", "<Plug>(vimtex-[M)", mode = "n" },
+            { "[E", "<Plug>(vimtex-[M)", mode = "x" },
+            { "[E", "<Plug>(vimtex-[M)", mode = "o" },
+            
+            -- Use `m` for environment navitation
+            { "]m", "<Plug>(vimtex-]n)", mode = "n" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
+            { "]M", "<Plug>(vimtex-]N)", mode = "n" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
+            { "[m", "<Plug>(vimtex-[n)", mode = "n" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
+            { "[M", "<Plug>(vimtex-[N)", mode = "n" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
+            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
+        },
     },
     {
         "wakatime/vim-wakatime",
@@ -264,9 +291,7 @@ local plugins = {
     -- input method select
     {
         'keaising/im-select.nvim',
-        config = function()
-            require("plugin-config.im-select")
-        end,
+        config = get_config("im-select")
     },
     --------------- LSP ---------------
     {

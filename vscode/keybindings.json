@@ -12,6 +12,11 @@
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
     },
+    {
+        "key": "cmd+] cmd+]",
+        "command": "latex-workshop.close-env",
+        "when": "neovim.mode == insert && editorTextFocus && !virtualWorkspace && editorLangId == 'latex'"
+    },
     // {
     //     "key": "] ]",
     //     "command": "latex-workshop.close-env",
