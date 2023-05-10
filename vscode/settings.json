@@ -46,7 +46,7 @@
     ],
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
-    "diffEditor.diffAlgorithm": "experimental",
+    "diffEditor.diffAlgorithm": "advanced",
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
     "doxdocgen.generic.authorName": "CalaW",
@@ -74,7 +74,7 @@
     // MONOLISA settings
     // "editor.fontFamily": "MonoLisa, 思源黑体",
     "editor.fontFamily": "MonoLisa variable, 苹方",
-    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss11' on, 'ss12' on",
+    "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
     // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss11' on",
     "editor.fontSize": 17,
     "editor.fontVariations": true,
@@ -121,7 +121,6 @@
     "github.gitProtocol": "ssh",
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
-    "latex-workshop.bind.enter.key": false,
     "latex-workshop.hover.preview.newcommand.newcommandFile": "/Users/calaw/Documents/Program/LaTeX-Template/CalaWMath.sty",
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.intellisense.package.extra": [
@@ -136,7 +135,7 @@
         "xcolor",
         "hyperref",
         "biblatex",
-        "CalaWHomework"
+        "CalaWMath"
     ],
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.autoClean.run": "onFailed",
@@ -239,6 +238,12 @@
             "env": {},
             "name": "latexmk-pdfLaTeX"
         }
+    ],
+    "latex-workshop.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'"
     ],
     "latex-workshop.linting.chktex.exec.args": [
         "-wall",

@@ -48,8 +48,8 @@ help() {
 }
 alias ls='exa'
 alias ll='exa -lahF --git' # --header, maybe lsd is alternative(with icon)
-alias mv='mv -i' # ask when override
-alias cp='cp -i' # ask when override
+alias mv='mv -iv' # ask when override
+alias cp='cp -iv' # ask when override
 alias df='df -h' # human readable disk
 alias cat='bat'
 alias top='btm'
