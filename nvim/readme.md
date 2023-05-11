@@ -58,3 +58,13 @@ f*unc_name(a, b, x)         csfnew_name     new_name(a, b, x)
 Old text                    Command         New text ~
 inner text                  yssi/<CR>\      /inner text\
 ```
+
+`a`: >, `p`: ), `B`: }, `b`: ], `q`: quotes, `s`: all pair
+
+disabled literal surround (invalid_key_behavior)
+
+LaTeX related surround is placed in `after/ftplugin/tex.vim`
+
+## vimtex
+
+
