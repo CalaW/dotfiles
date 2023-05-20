@@ -98,6 +98,7 @@ local plugins = {
     {
         "nvim-treesitter/nvim-treesitter",
         version = false,
+        cond = not vim.g.vscode,
         build = ":TSUpdate",
         event = { "BufReadPost", "BufNewFile" },
         config = get_config("nvim-treesitter")
@@ -107,7 +108,7 @@ local plugins = {
         "lukas-reineke/indent-blankline.nvim",
         event = { "BufReadPost", "BufNewFile" },
         cond = not vim.g.vscode,
-        config = get_config("indent-blankline")
+        config = get_config("indent-blankline"),
     },
     -- toggleterm
     -- {
@@ -121,7 +122,7 @@ local plugins = {
     {
         "kylechui/nvim-surround",
         event = "VeryLazy",
-        config = get_config("nvim-surround")
+        config = get_config("nvim-surround"),
     },
     -- Comment
     {
@@ -138,56 +139,14 @@ local plugins = {
     -- leap
     {
         "ggandor/leap.nvim",
+        dependencies = { "tpope/vim-repeat" },
         config = get_config("leap")
     },
     -- vimtex
     {
         "lervag/vimtex",
         ft = "tex",
-        config = get_config("vimtex"),
-        keys = {
-            -- Use `i` for the item text object
-            { "ai", "<Plug>(vimtex-am)", mode = "o" },
-            { "ai", "<Plug>(vimtex-am)", mode = "x" },
-            { "ii", "<Plug>(vimtex-im)", mode = "o" },
-            { "ii", "<Plug>(vimtex-im)", mode = "x" },
-            
-            -- Use `m` for the math text object
-            { "am", "<Plug>(vimtex-a$)", mode = "o" },
-            { "am", "<Plug>(vimtex-a$)", mode = "x" },
-            { "im", "<Plug>(vimtex-i$)", mode = "o" },
-            { "im", "<Plug>(vimtex-i$)", mode = "x" },
-            { "tsm", "<Plug>(vimtex-env-toggle-math)" },
-            { "dsm", "<Plug>(vimtex-env-delete-math)" },
-            
-            -- Use `e` for environment navitation
-            { "]e", "<Plug>(vimtex-]m)", mode = "n" },
-            { "]e", "<Plug>(vimtex-]m)", mode = "x" },
-            { "]e", "<Plug>(vimtex-]m)", mode = "o" },
-            { "]E", "<Plug>(vimtex-]M)", mode = "n" },
-            { "]E", "<Plug>(vimtex-]M)", mode = "x" },
-            { "]E", "<Plug>(vimtex-]M)", mode = "o" },
-            { "[e", "<Plug>(vimtex-[m)", mode = "n" },
-            { "[e", "<Plug>(vimtex-[m)", mode = "x" },
-            { "[e", "<Plug>(vimtex-[m)", mode = "o" },
-            { "[E", "<Plug>(vimtex-[M)", mode = "n" },
-            { "[E", "<Plug>(vimtex-[M)", mode = "x" },
-            { "[E", "<Plug>(vimtex-[M)", mode = "o" },
-            
-            -- Use `m` for environment navitation
-            { "]m", "<Plug>(vimtex-]n)", mode = "n" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
-            { "]M", "<Plug>(vimtex-]N)", mode = "n" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
-            { "[m", "<Plug>(vimtex-[n)", mode = "n" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
-            { "[M", "<Plug>(vimtex-[N)", mode = "n" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "x" },
-            { "]m", "<Plug>(vimtex-]n)", mode = "o" },
-        },
+        init = get_config("vimtex"),
     },
     {
         "wakatime/vim-wakatime",

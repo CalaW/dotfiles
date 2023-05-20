@@ -4,34 +4,34 @@
 
 ### Basic usage
 
-"You Surround {motion} with {char}"
+"Get Surround {motion} with {char}"
 
 In all of the following examples, the `*` denotes the cursor position:
 ```
 Old text                    Command         New text ~
-local str = H*ello          ysiw"           local str = "Hello"
-require"nvim-surroun*d"     ysa")           require("nvim-surround")
-char c = *x;                ysl'            char c = 'x';
-int a[] = *32;              yst;}           int a[] = {32};
+local str = H*ello          gsiw"           local str = "Hello"
+require"nvim-surroun*d"     gsa")           require("nvim-surround")
+char c = *x;                gsl'            char c = 'x';
+int a[] = *32;              gst;}           int a[] = {32};
 ```
 
-"S" command in visual mode, |xxx| for selection
+"gS" command in visual mode, |xxx| for selection
 ```
 Old text                    Command         New text ~
-local str = |some text|     S'              local str = 'some text'
-|div id="test"|</div>       S>              <div id="test"></div>
+local str = |some text|     gs'             local str = 'some text'
+|div id="test"|</div>       gs>             <div id="test"></div>
 ```
 
-`ds[char]`: delete surround
-`cs{target}{replacement}`: change surround
+`dgs[char]`: delete surround,
+`cgs{target}{replacement}`: change surround
 
-*yss* operates on the current line via `yss[char]`, ignoring leading and trailing whitespace.
+*gss* operates on the current line, ignoring leading and trailing whitespace.
 
-*yS* and *ySS* add the delimiter pair on new lines.
+*gS* and *gSS* add the delimiter pair on new lines.
 
 ### Pairs
 
-**closing character** will surround the selection with just the pair itself，
+**closing character** will surround the selection with just the pair itself;
 **opening character** will add a whitespace gap between the selection and delimiter pair.
 
 `tT`: HTML tags
@@ -61,10 +61,27 @@ inner text                  yssi/<CR>\      /inner text\
 
 `a`: >, `p`: ), `B`: }, `b`: ], `q`: quotes, `s`: all pair
 
-disabled literal surround (invalid_key_behavior)
+disabled literal surround (`invalid_key_behavior`)
 
-LaTeX related surround is placed in `after/ftplugin/tex.vim`
+LaTeX related surround is placed in `after/ftplugin/tex.vim`.
+`c`: command, `e`: environment, `m`: math
+
+## leap.nvim
+
+s/S for normal mode sneak
+
+A character at the end of a line can be targeted by pressing <space> after it.
+
+Empty lines can also be targeted, by pressing the newline alias twice (<space><space> by default).
 
 ## vimtex
 
+change math text object from `$` to `m`
 
+`]e` for navigating between environments,
+`]m` for navigating between math,
+`]i` for navigating between items.
+
+`tgsd` to toggle between delimiters,
+`tgsD` to toggle between delimiters reversely,
+`tgsm` to toggle math environments.

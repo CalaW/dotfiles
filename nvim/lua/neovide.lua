@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 local opt = {noremap = true, silent = true}
 
-vim.opt.guifont = {"MonoLisa", ":h16"}
+vim.opt.guifont = {"MonoLisa Variable", ":h16"}
 vim.g.neovide_floating_blur_amount_x = 2.0
 vim.g.neovide_floating_blur_amount_y = 2.0
 vim.g.neovide_hide_mouse_when_typing = true
