@@ -1,0 +1,11 @@
+lookForAlignDelims:
+  tabular:
+    multiColumnGrouping: 1
+
+modifyLineBreaks:
+  oneSentencePerLine:
+    manipulateSentences: 1
+    sentencesEndWith:
+          other: "\:|\;|\,|。|．|？|！"
+  specialBeginEnd:
+    displayMath:

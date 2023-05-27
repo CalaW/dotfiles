@@ -8,7 +8,6 @@
     insteadOf = https://github.com/
 [commit]
     verbose = true
-	gpgsign = true
 [pull]
 	rebase = false
 [fetch]
@@ -20,7 +19,7 @@
 	quotepath = false
 	excludesfile = /Users/calaw/.gitignore
 [gpg]
-	program = gpg
+	program = /opt/homebrew/bin/gpg
 [alias]
 	st = status
 	c = commit

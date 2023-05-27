@@ -2,7 +2,7 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.alacritty.yml: alacritty.yml
@@ -20,6 +20,7 @@
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.indentconfig.yaml: latexindentconfig.yaml
     ~/Library/Application Support/Code/User/settings.json:
       create: true
       path: vscode/settings.json
@@ -35,4 +36,4 @@
     ~/.zshrc: zshrc
 
 - shell:
-  - [git submodule update --init --recursive --remote, Installing submodules]
+    - [git submodule update --init --recursive --remote, Installing submodules]
