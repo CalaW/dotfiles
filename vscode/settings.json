@@ -6,6 +6,7 @@
     "[latex]": {
         "editor.formatOnPaste": false,
         "editor.indentSize": 2,
+        "editor.occurrencesHighlight": false,
         "editor.suggestSelection": "recentlyUsedByPrefix",
         "editor.tabSize": 2
     },
@@ -16,6 +17,17 @@
         "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true
     },
+    "apc.activityBar": {
+        "position": "bottom",
+        "size": 22
+    },
+    "apc.electron": {
+        "frame": false
+    },
+    "apc.statusBar": {
+        "position": "editor-bottom"
+    },
+    "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
     "clangd.arguments": [
         "-j=12",
@@ -47,40 +59,21 @@
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
     "diffEditor.diffAlgorithm": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
     "doxdocgen.generic.authorName": "CalaW",
     "doxdocgen.generic.useGitUserEmail": true,
     "doxdocgen.generic.useGitUserName": true,
     "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
-    // "editor.fontFamily": "Hack, 思源黑体",
-    // "editor.fontFamily": "Hacc Nerd Font Mono, 思源黑体",
-    // "editor.fontFamily": "JetBrains Mono, 思源黑体",
-    // "editor.fontFamily": "SF Mono, 苹方",
-    // "editor.fontFamily": "SF Mono, 思源黑体",
-    // "editor.fontFamily": "IBM Plex Mono, 思源黑体",
-    // "editor.fontFamily": "MesloLGS Nerd Font Mono, 思源黑体",
-    // "editor.fontFamily": "Source Code Pro, 思源黑体",
-    // "editor.fontFamily": "思源等宽",
-    // "editor.fontFamily": "Menlo, 思源黑体",
-    // "editor.fontFamily": "Monaco, 思源黑体",
-    // "editor.fontFamily": "JuliaMono",
-    // "editor.fontLigatures": "'calt' on, 'zero', 'ss01'",
-    // "editor.fontFamily": "Fira Code, 思源黑体",
-    // "editor.fontLigatures": true,
-    // MONOLISA settings
-    // "editor.fontFamily": "MonoLisa, 思源黑体",
     "editor.fontFamily": "MonoLisa variable, 苹方",
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
-    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss11' on",
-    "editor.fontSize": 17,
+    "editor.fontSize": 16,
     "editor.fontVariations": true,
-    "editor.guides.bracketPairs": true,
+    "editor.guides.highlightActiveIndentation": "always",
     "editor.inlineSuggest.enabled": true,
-    // "editor.fontFamily": "MonoLisa, FZYOUHK_508R--GBK1-0",
     "editor.lineHeight": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.renderCharacters": false,
@@ -95,9 +88,6 @@
         "zh-hans": true,
         "zh-hant": true
     },
-    // "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss02' on, 'ss04' on",
-    // "editor.fontLigatures": "'calt' off, 'liga' off, 'zero' on, 'ss04' on",
-    // end MONOLISA settings
     "editor.unicodeHighlight.invisibleCharacters": false,
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
@@ -111,7 +101,6 @@
     "files.autoSaveDelay": 10000,
     "files.insertFinalNewline": true,
     "git.autofetch": true,
-    "git.enableCommitSigning": true,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
@@ -119,6 +108,9 @@
         "yaml": false
     },
     "github.gitProtocol": "ssh",
+    "isort.args": [
+        "-l 100"
+    ],
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
     "latex-workshop.hover.preview.newcommand.newcommandFile": "/Users/calaw/Documents/Program/LaTeX-Template/CalaWMath.sty",
@@ -193,7 +185,6 @@
             ]
         }
     ],
-    // "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.latex.tools": [
         {
             "args": [
@@ -243,7 +234,9 @@
         "-c",
         "%DIR%/",
         "%TMPFILE%",
-        "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'"
+        "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'",
+        "--GCString",
+        "-m"
     ],
     "latex-workshop.linting.chktex.exec.args": [
         "-wall",
@@ -257,7 +250,6 @@
     "latex-workshop.texcount.autorun": "onSave",
     "latex-workshop.view.pdf.external.synctex.args": [
         "-r",
-        // "-b", //highlight, ugly
         "%LINE%",
         "%PDF%",
         "%TEX%"
@@ -270,7 +262,16 @@
     "latex-workshop.view.pdf.external.viewer.command": "/Applications/Skim.app/Contents/SharedSupport/displayline",
     "latex-workshop.view.pdf.viewer": "external",
     "notebook.lineNumbers": "on",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python.formatting.blackArgs": [
+        "-l 100"
+    ],
+    "python.formatting.blackPath": "/opt/homebrew/bin/black",
+    "python.formatting.provider": "black",
+    "python.linting.mypyEnabled": true,
     "redhat.telemetry.enabled": false,
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
@@ -287,7 +288,7 @@
         "language-julia.interrupt"
     ],
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },
@@ -295,199 +296,23 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.showExitAlert": false,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "KEY POINT",
-        "NOTE"
+    "todo-tree.filtering.excludeGlobs": [
+        "**/vendor/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/bower_components/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map"
     ],
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
-    "vim.enableNeovim": true,
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "]",
-                "]"
-            ],
-            "commands": [
-                "latex-workshop.close-env"
-            ],
-            "silent": true
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "after": [
-                "i"
-            ],
-            "before": [
-                "c",
-                "s",
-                "e"
-            ],
-            "commands": [
-                "latex-workshop.select-envname"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "v",
-                "i",
-                "e"
-            ],
-            "commands": [
-                "latex-workshop.select-envcontent"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "v",
-                "a",
-                "e"
-            ],
-            "commands": [
-                "latex-workshop.select-env"
-            ],
-            "silent": true
-        },
-        {
-            "after": [
-                "F",
-                "\\",
-                "d",
-                "f",
-                "{",
-                "f",
-                "}",
-                "x"
-            ],
-            "before": [
-                "d",
-                "s",
-                "c"
-            ]
-        },
-        {
-            "after": [
-                "F",
-                "\\",
-                "l",
-                "c",
-                "w"
-            ],
-            "before": [
-                "c",
-                "s",
-                "c"
-            ]
-        },
-        {
-            "before": [
-                "t",
-                "s",
-                "$"
-            ],
-            "commands": [
-                "latex-workshop.toggle-equation-envname"
-            ],
-            "silent": true
-        },
-        /* curently not working, may be related to vscode commands issue
-            {
-                "before": ["d", "s", "e"],
-                "commands": [
-                    "latex-workshop.select-envname",
-                    "editor.action.deleteLines"
-                ],
-                "silent": true
-            }, */
-        /*             {
-                "before": ["d", "i", "e"],
-                "commands": [
-                    "latex-workshop.select-envcontent",
-                    "editor.action.deleteLines"
-                ],
-                "silent": true
-            }, */
-        {
-            "before": [
-                "<leader>",
-                "l",
-                "l"
-            ],
-            "commands": [
-                "latex-workshop.build"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                "<leader>",
-                "l",
-                "k"
-            ],
-            "commands": [
-                "latex-workshop.kill"
-            ]
-            // "silent": true
-        },
-        {
-            "before": [
-                "<leader>",
-                "l",
-                "c"
-            ],
-            "commands": [
-                "latex-workshop.clean"
-            ],
-            "silent": true
-        },
-        {
-            "after": [
-                "g",
-                "j"
-            ],
-            "before": [
-                "j"
-            ]
-        },
-        {
-            "after": [
-                "g",
-                "k"
-            ],
-            "before": [
-                "k"
-            ]
-        }
-    ],
-    "vim.sneak": true,
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        }
-    ],
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
+    "window.titleBarStyle": "native",
+    "workbench.colorCustomizations": {
+        "scrollbar.shadow": "#00000000"
+    },
     "workbench.colorTheme": "Dracula Pro",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
