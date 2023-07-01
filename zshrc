@@ -70,14 +70,14 @@ function manpdf () {
 # prints the path of the front Finder window. Enter Home if no window open
 function pwdf () {
     osascript <<EOS
-        tell application "Finder"
-            if (count of Finder windows) is 0 then
-                set dir to (home as alias)
-            else
-                set dir to ((target of Finder window 1) as alias)
-            end if
-            return POSIX path of dir
-        end tell
+tell application "Finder"
+    if (count of Finder windows) is 0 then
+        set dir to (home as alias)
+    else
+        set dir to ((target of Finder window 1) as alias)
+    end if
+    return POSIX path of dir
+end tell
 EOS
 }
 # changes directory to frontmost Finder window

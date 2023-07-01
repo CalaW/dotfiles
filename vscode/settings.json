@@ -18,13 +18,15 @@
         "editor.formatOnType": true
     },
     "apc.activityBar": {
+        "hideSettings": true,
         "position": "bottom",
-        "size": 22
+        "size": 25
     },
     "apc.electron": {
         "frame": false
     },
     "apc.statusBar": {
+        "height": 25,
         "position": "editor-bottom"
     },
     "breadcrumbs.enabled": false,
@@ -311,7 +313,11 @@
     "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
     "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
-        "scrollbar.shadow": "#00000000"
+        "activityBar.activeBorder": "#00000000",
+        "activityBar.background": "#0B0A10",
+        "scrollbar.shadow": "#00000000",
+        "sideBar.border": "#0B0A10",
+        "statusBarItem.remoteBackground": "#7970A9"
     },
     "workbench.colorTheme": "Dracula Pro",
     "workbench.editorAssociations": {
