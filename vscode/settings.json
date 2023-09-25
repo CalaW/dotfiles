@@ -80,6 +80,7 @@
     "editor.lineNumbers": "relative",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
+    "editor.occurrencesHighlight": false,
     "editor.renderWhitespace": "trailing",
     "editor.semanticHighlighting.enabled": true,
     "editor.unicodeHighlight.allowedCharacters": {
