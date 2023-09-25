@@ -14,7 +14,7 @@
         "editor.wordWrap": "on"
     },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true
     },
     "apc.activityBar": {
@@ -70,7 +70,7 @@
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "MonoLisa variable, 苹方",
+    "editor.fontFamily": "MonoLisa Variable-NoScript, 苹方",
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
     "editor.fontSize": 16,
     "editor.fontVariations": true,
@@ -265,6 +265,10 @@
     "latex-workshop.view.pdf.viewer": "external",
     "material-icon-theme.hidesExplorerArrows": true,
     "material-icon-theme.saturation": 0.6,
+    "mypy-type-checker.args": [
+        "--follow-imports=skip",
+        "--ignore-missing-imports"
+    ],
     "notebook.lineNumbers": "on",
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
@@ -280,6 +284,10 @@
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
     "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredExtensions": [
+        "asvetliakov.vscode-neovim",
+        "ms-ceintl.vscode-language-pack-zh-hans"
+    ],
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
         "vim.autoSwitchInputMethod.obtainIMCmd",

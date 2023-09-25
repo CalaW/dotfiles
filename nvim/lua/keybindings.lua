@@ -14,7 +14,7 @@ map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 -- doesn't yank an empty line into your default register:
 map("n", "dd", function ()
-    vim.notify("custom dd")
+    -- vim.notify("custom dd")
     if vim.api.nvim_get_current_line():match("^%s*$") then
         return [["_dd]]
     else
@@ -24,7 +24,7 @@ end, { expr = true })
 
 -- Another expression mapping for i that will indent properly on empty lines:
 map("n", "i", function ()
-    vim.notify("custom i")
+    -- vim.notify("custom i")
     if #vim.fn.getline(".") == 0 then
         return [["_cc]]
     else
@@ -34,10 +34,10 @@ end, { expr = true })
 
 -- commentary in vscode
 if vim.g.vscode then
-    map("x", "gc", "<Plug>VSCodeCommentary")
-    map("n", "gc", "<Plug>VSCodeCommentary")
-    map("o", "gc", "<Plug>VSCodeCommentary")
-    map("n", "gcc", "<Plug>VSCodeCommentaryLine")
+    map("x", "gc", "<Cmd>call VSCodeCall('editor.action.commentLine')<CR><Esc>")
+    map("n", "gc", "<Cmd>call VSCodeCall('editor.action.commentLine')<CR><Esc>")
+    map("o", "gc", "<Cmd>call VSCodeCall('editor.action.commentLine')<CR><Esc>")
+    map("n", "gcc", "<Cmd>call VSCodeCall('editor.action.commentLine')<CR><Esc>")
 end
 
 local pluginKeys = {}

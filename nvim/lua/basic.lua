@@ -17,7 +17,7 @@ vim.wo.cursorline = true
 -- 显示左侧图标指示列
 -- vim.wo.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
-vim.wo.colorcolumn = "120"
+-- vim.wo.colorcolumn = "120"
 
 ---
 -- 缩进2个空格等于一个Tab
