@@ -70,7 +70,7 @@
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "MonoLisa Variable-NoScript, 苹方",
+    "editor.fontFamily": "MonoLisa Variable-NoScript, 苹方, SFMono Nerd Font Mono",
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
     "editor.fontSize": 16,
     "editor.fontVariations": true,
@@ -302,6 +302,7 @@
     ],
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.integrated.env.osx": {
         "FIG_NEW_SESSION": "1"
     },

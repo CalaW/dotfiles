@@ -16,7 +16,8 @@
       # glob: true
       path: nvim/lua/
     ~/.config/nvim/init.lua: nvim/init.lua
-    ~/.config/zellij/config.kdl: zellij/config.kdl
+    ~/.config/starship.toml: starship.toml
+    ~/.config/zellij/config.kdl: zellij.kdl
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore

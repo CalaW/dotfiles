@@ -1,0 +1,192 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+# Which is equivalent to
+format = """
+$os\
+$username\
+$hostname\
+$sudo\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$package\
+$python\
+$conda\
+$fill\
+$jobs\
+$cmd_duration\
+$time\
+─╮\
+$line_break\
+$container\
+$character"""
+
+right_format = """
+$env_var\
+─╯"""
+
+
+[c]
+symbol = " "
+version_format = "${raw}"
+commands = [["clang", "--version"], ["cc", "--version"], ["gcc", "--version"]]
+
+[cmd_duration]
+format = "[ $duration]($style) "
+min_time = 500
+style = "yellow"
+
+[directory]
+truncation_symbol = '…/'
+read_only = " "
+fish_style_pwd_dir_length = 3
+
+[env_var]
+variable = "http_proxy"
+symbol = "↔ "
+format = "[$symbol$env_value]($style) "
+style = "bright-black dimmed"
+
+[fill]
+symbol = " "
+
+[sudo]
+disabled = false
+symbol = "󱡧 "
+style = "blue"
+format = "[$symbol]($style)"
+
+[os]
+disabled = false
+
+[time]
+disabled = false
+format = "[ $time]($style) "
+style = "cyan"
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[git_status]
+# place symbols before '$count'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
