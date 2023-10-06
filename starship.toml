@@ -50,7 +50,7 @@ fish_style_pwd_dir_length = 3
 variable = "http_proxy"
 symbol = "↔ "
 format = "[$symbol$env_value]($style) "
-style = "bright-black dimmed"
+style = "bright-black"
 
 [fill]
 symbol = " "
