@@ -107,6 +107,7 @@ local plugins = {
     {
         "lukas-reineke/indent-blankline.nvim",
         event = { "BufReadPost", "BufNewFile" },
+        main = "ibl",
         cond = not vim.g.vscode,
         config = get_config("indent-blankline"),
     },

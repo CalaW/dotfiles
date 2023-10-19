@@ -58,7 +58,7 @@ symbol = " "
 [sudo]
 disabled = false
 symbol = "󱡧 "
-style = "blue"
+style = "yellow"
 format = "[$symbol]($style)"
 
 [os]

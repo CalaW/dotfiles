@@ -1,5 +1,6 @@
 {
     "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": true
     },
@@ -29,8 +30,12 @@
         "height": 25,
         "position": "editor-bottom"
     },
+    "black-formatter.args": [
+        "-l 100"
+    ],
     "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.arguments": [
         "-j=12",
         "--clang-tidy",
@@ -45,9 +50,6 @@
         "--completion-style=detailed",
         "--fallback-style=Webkit",
         "--function-arg-placeholders=true"
-    ],
-    "clangd.fallbackFlags": [
-        "-std=c++20"
     ],
     "cSpell.userWords": [
         "Eigen",
@@ -70,7 +72,7 @@
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "MonoLisa Variable-NoScript, 苹方, SFMono Nerd Font Mono",
+    "editor.fontFamily": "MonoLisa Variable, 苹方, SFMono Nerd Font Mono",
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
     "editor.fontSize": 16,
     "editor.fontVariations": true,
@@ -275,19 +277,16 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-    "python.formatting.blackArgs": [
-        "-l 100"
-    ],
-    "python.formatting.blackPath": "/opt/homebrew/bin/black",
-    "python.formatting.provider": "black",
-    "python.linting.mypyEnabled": true,
     "redhat.telemetry.enabled": false,
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
     "security.workspace.trust.untrustedFiles": "open",
     "settingsSync.ignoredExtensions": [
         "asvetliakov.vscode-neovim",
-        "ms-ceintl.vscode-language-pack-zh-hans"
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "ms-vscode.cpptools",
+        "ms-iot.vscode-ros",
+        "sourcery.sourcery"
     ],
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
@@ -295,6 +294,7 @@
         "vim.autoSwitchInputMethod.switchIMCmd",
         "vim.autoSwitchInputMethod.enable"
     ],
+    "sourcery.codeLens": false,
     "telemetry.telemetryLevel": "error",
     "terminal.external.osxExec": "Alacritty.app",
     "terminal.integrated.commandsToSkipShell": [
