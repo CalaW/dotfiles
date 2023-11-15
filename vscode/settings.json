@@ -43,13 +43,14 @@
         "--all-scopes-completion",
         "--log=verbose",
         "--pretty",
-        "--header-insertion=iwyu",
+        "--header-insertion=never",
         "--header-insertion-decorators",
         "--completion-style=detailed",
         "--pch-storage=memory",
         "--completion-style=detailed",
         "--fallback-style=Webkit",
-        "--function-arg-placeholders=true"
+        "--function-arg-placeholders=true",
+        "--clang-tidy-checks=performance-*,bugprone-*,protability-*,modernize-*"
     ],
     "cSpell.userWords": [
         "Eigen",
@@ -104,8 +105,8 @@
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
-    "files.insertFinalNewline": true,
     "git.autofetch": true,
+    "git.confirmSync": false,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
@@ -286,15 +287,17 @@
         "ms-ceintl.vscode-language-pack-zh-hans",
         "ms-vscode.cpptools",
         "ms-iot.vscode-ros",
-        "sourcery.sourcery"
+        "vscodevim.vim"
     ],
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
         "vim.autoSwitchInputMethod.obtainIMCmd",
         "vim.autoSwitchInputMethod.switchIMCmd",
-        "vim.autoSwitchInputMethod.enable"
+        "vim.autoSwitchInputMethod.enable",
+        "vim.useCtrlKeys",
+        "vim.sneak",
+        "http.proxy"
     ],
-    "sourcery.codeLens": false,
     "telemetry.telemetryLevel": "error",
     "terminal.external.osxExec": "Alacritty.app",
     "terminal.integrated.commandsToSkipShell": [
@@ -337,6 +340,5 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.layoutControl.enabled": false,
-    "workbench.productIconTheme": "material-product-icons",
-    "zenMode.hideTabs": false
+    "workbench.productIconTheme": "material-product-icons"
 }
