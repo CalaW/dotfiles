@@ -1,7 +1,7 @@
 [user]
 	email = maker_cc@foxmail.com
 	name = CalaW
-	signingkey = EC5CDBBECC9BBBF8
+	signingkey = 3FFABC5B70F4F73794AA46EFEC5CDBBECC9BBBF8
 [init]
 	defaultBranch = main
 [url "git@github.com:"]
@@ -20,6 +20,7 @@
 	excludesfile = /Users/calaw/.gitignore
 [gpg]
 	program = /opt/homebrew/bin/gpg
+	format = openpgp
 [alias]
 	st = status
 	c = commit

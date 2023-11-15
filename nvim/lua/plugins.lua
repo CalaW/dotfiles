@@ -209,7 +209,7 @@ local plugins = {
     -- },
     -- formatting
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         event = { "BufReadPre", "BufNewFile" },
         cond = not vim.g.vscode,
         dependencies = { "nvim-lua/plenary.nvim" },
