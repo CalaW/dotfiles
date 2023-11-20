@@ -8,9 +8,16 @@
     ~/.alacritty.yml: alacritty.yml
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
+    ~/.config/bat/config: bat_config
     ~/.config/fish/:
+      create: true
       glob: true
       path: fish/**
+    ~/.config/latexindent/:
+      create: true
+      glob: true
+      path: latexindent/**
+      exclude: [latexindent/indentconfig.yaml]
     ~/.config/nvim/after/:
       create: true
       path: nvim/after/
@@ -24,7 +31,7 @@
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
-    ~/.indentconfig.yaml: latexindentconfig.yaml
+    ~/.indentconfig.yaml: latexindent/indentconfig.yaml
     ~/Library/Application Support/Code/User/settings.json:
       create: true
       path: vscode/settings.json
