@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://github.com/cmhughes/latexindent.pl/raw/main/documentation/latexindent-yaml-schema.json
+
+onlyOneBackup: 1
+indentPreamble: 1
+defaultIndent: '  '
+  
+removeTrailingWhitespace:
+  beforeProcessing: 1
+  afterProcessing: 1
+
+specialBeginEnd:
+  inlineMathTeX:
+    begin: '(?<!\$)(?<!\\)\$(?!\$)' # $ but *not* \$ or $$
+    body: '[^$]*?'                  # anything *except* $
+    end: '(?<!\\)\$(?!\$)'          # $ but *not* \$ or $$
+    lookForThis: 1
+  inlineMath:
+    begin: '\\\('
+    end: '\\\)'
+    lookForThis: 1
+
+lookForAlignDelims:
+  tabular:
+    multiColumnGrouping: 1
+
+modifyLineBreaks:
+  preserveBlankLines: 0
+  condenseMultipleBlankLinesInto: 1
+  oneSentencePerLine:
+    manipulateSentences: 0
+    sentencesEndWith:
+          other: '\:|\;|\,|。|．|？|！'
+  environments:
+    BeginStartsOnOwnLine: 1
+    BodyStartsOnOwnLine: 1
+    EndStartsOnOwnLine: 1
+    EndFinishesWithLineBreak: 1
+    DBSFinishesWithLineBreak: 1
+  specialBeginEnd:
+    SpecialBeginStartsOnOwnLine: 1
+    SpecialBodyStartsOnOwnLine: 1
+    SpecialEndStartsOnOwnLine: 1
+    SpecialEndFinishesWithLineBreak: 1
+    inlineMath:
+      SpecialBeginStartsOnOwnLine: 0
+      SpecialBodyStartsOnOwnLine: 0
+      SpecialEndStartsOnOwnLine: 0
+      SpecialEndFinishesWithLineBreak: 0
+    inlineMathTeX:
+      SpecialBeginStartsOnOwnLine: 0
+      SpecialBodyStartsOnOwnLine: 0
+      SpecialEndStartsOnOwnLine: 0
+      SpecialEndFinishesWithLineBreak: 0
+    

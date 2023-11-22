@@ -9,7 +9,9 @@
 [commit]
     verbose = true
 [pull]
-	rebase = false
+	rebase = true
+[push]
+	autoSetupRemote = true
 [fetch]
     prune = true
 [color]
