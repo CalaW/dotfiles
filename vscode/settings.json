@@ -240,9 +240,10 @@
         "-c",
         "%DIR%/",
         "%TMPFILE%",
+        "-l=%DIR%/latexindent.yaml",
+        "-m",
         "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'",
-        "--GCString",
-        "-m"
+        "--GCString"
     ],
     "latex-workshop.linting.chktex.exec.args": [
         "-wall",
