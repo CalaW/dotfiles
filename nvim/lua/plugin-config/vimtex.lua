@@ -6,10 +6,10 @@ vim.g.vimtex_delim_toggle_mod_list = {
     {"\\Biggl", "\\Biggr"},
 }
 vim.g.vimtex_env_toggle_math_map = {
-    ["$"] = "\\(",
-    ["$$"] = "\\[",
+    ["\\$"] = "\\(",
+    ["\\$\\$"] = "\\[",
     ["\\("] = "\\[",
-    ["\\["] = "align*",
+    ["\\["] = "equation",
     ["align*"] = "\\(",
     ["equation"] = "align",
     ["align"] = "\\(",

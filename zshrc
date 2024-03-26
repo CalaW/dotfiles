@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 setopt NO_CASE_GLOB         #case-insensitive globbing
 setopt AUTO_CD              #cd when directly enter path
 setopt SHARE_HISTORY        #share history across multiple sessions
@@ -46,8 +39,8 @@ alias bathelp='bat --plain --language=help'
 help() {
     "$@" --help 2>&1 | bathelp
 }
-alias ls='exa'
-alias ll='exa -lahF --git' # --header, maybe lsd is alternative(with icon)
+alias ls='eza'
+alias ll='eza -lahF --git' # --header, maybe lsd is alternative(with icon)
 alias mv='mv -iv' # ask when override
 alias cp='cp -iv' # ask when override
 alias df='df -h' # human readable disk
@@ -83,7 +76,6 @@ EOS
 # changes directory to frontmost Finder window
 alias cdf='cd "$(pwdf)"'
 
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -105,9 +97,6 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build}'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
     --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
@@ -122,10 +111,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(thefuck --alias)
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-
-fpath+=~/.func
 
 # The following lines were added by compinstall
 

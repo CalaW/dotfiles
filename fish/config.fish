@@ -13,6 +13,7 @@ fish_add_path /opt/homebrew/opt/ruby/bin/
 source ~/.config/fish/alias.fish
 source ~/.config/fish/functions.fish
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -Ua fish_user_paths "$HOME/.rye/shims"
 
 # homebrew mirror
 set -x HOMEBREW_API_DOMAIN "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
@@ -38,3 +39,5 @@ if status is-interactive
 end
 starship init fish | source
 
+set -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup

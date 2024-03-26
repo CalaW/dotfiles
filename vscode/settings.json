@@ -2,14 +2,18 @@
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.suggest.insertMode": "replace",
-        "editor.wordBasedSuggestions": true
+        "editor.wordBasedSuggestions": "matchingDocuments"
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "csharpier.csharpier-vscode"
     },
     "[latex]": {
         "editor.formatOnPaste": false,
         "editor.indentSize": 2,
-        "editor.occurrencesHighlight": false,
+        "editor.occurrencesHighlight": "off",
         "editor.suggestSelection": "recentlyUsedByPrefix",
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on"
     },
     "[plaintext]": {
         "editor.wordWrap": "on"
@@ -33,7 +37,6 @@
     "black-formatter.args": [
         "-l 100"
     ],
-    "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
     "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.arguments": [
@@ -78,12 +81,13 @@
     "editor.fontSize": 16,
     "editor.fontVariations": true,
     "editor.guides.highlightActiveIndentation": "always",
+    "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.renderWhitespace": "trailing",
     "editor.semanticHighlighting.enabled": true,
     "editor.unicodeHighlight.allowedCharacters": {
@@ -111,6 +115,7 @@
         "*": true,
         "markdown": true,
         "plaintext": true,
+        "scminput": false,
         "yaml": false
     },
     "github.gitProtocol": "ssh",
@@ -278,17 +283,27 @@
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "redhat.telemetry.enabled": false,
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
+    "security.promptForLocalFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
     "settingsSync.ignoredExtensions": [
         "asvetliakov.vscode-neovim",
         "ms-ceintl.vscode-language-pack-zh-hans",
         "ms-vscode.cpptools",
         "ms-iot.vscode-ros",
-        "vscodevim.vim"
+        "vscodevim.vim",
+        "sourcery.sourcery",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.vscodeintellicode-csharp",
+        "visualstudiotoolsforunity.vstuc",
+        "csharpier.csharpier-vscode",
+        "thqby.vscode-autohotkey2-lsp",
+        "julialang.language-julia",
+        "yy0931.mplstyle"
     ],
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
@@ -327,6 +342,7 @@
         "**/*.map"
     ],
     "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
+    "window.commandCenter": false,
     "window.titleBarStyle": "native",
     "workbench.colorCustomizations": {
         "activityBar.activeBorder": "#00000000",
@@ -336,6 +352,7 @@
         "statusBarItem.remoteBackground": "#7970A9"
     },
     "workbench.colorTheme": "Dracula Pro",
+    "workbench.editor.showTabs": "single",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
