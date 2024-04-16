@@ -7,6 +7,12 @@
     "[csharp]": {
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
     },
+    "[jsonc]": {
+        "editor.codeActionsOnSave": {
+            "source.sort.json": "explicit"
+        },
+        "editor.formatOnSave": true
+    },
     "[latex]": {
         "editor.formatOnPaste": false,
         "editor.indentSize": 2,
@@ -19,8 +25,12 @@
         "editor.wordWrap": "on"
     },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnType": true
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
     },
     "apc.activityBar": {
         "hideSettings": true,
@@ -34,9 +44,6 @@
         "height": 25,
         "position": "editor-bottom"
     },
-    "black-formatter.args": [
-        "-l 100"
-    ],
     "breadcrumbs.icons": false,
     "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.arguments": [
@@ -55,6 +62,7 @@
         "--function-arg-placeholders=true",
         "--clang-tidy-checks=performance-*,bugprone-*,protability-*,modernize-*"
     ],
+    "cmake.showOptionsMovedNotification": false,
     "cSpell.userWords": [
         "Eigen",
         "matplotlib",
@@ -119,9 +127,6 @@
         "yaml": false
     },
     "github.gitProtocol": "ssh",
-    "isort.args": [
-        "-l 100"
-    ],
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
     "latex-workshop.hover.preview.newcommand.newcommandFile": "/Users/calaw/Documents/Program/LaTeX-Template/CalaWMath.sty",
@@ -250,14 +255,6 @@
         "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'",
         "--GCString"
     ],
-    "latex-workshop.linting.chktex.exec.args": [
-        "-wall",
-        "-n22",
-        "-n30",
-        "-e16",
-        "-q",
-        "-n19"
-    ],
     "latex-workshop.linting.lacheck.enabled": true,
     "latex-workshop.texcount.autorun": "onSave",
     "latex-workshop.view.pdf.external.synctex.args": [
@@ -284,6 +281,9 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "redhat.telemetry.enabled": false,
+    "ruff.path": [
+        "/opt/homebrew/bin/ruff"
+    ],
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
     "security.promptForLocalFileProtocolHandling": false,
@@ -312,7 +312,8 @@
         "vim.autoSwitchInputMethod.enable",
         "vim.useCtrlKeys",
         "vim.sneak",
-        "http.proxy"
+        "http.proxy",
+        "ruff.path"
     ],
     "telemetry.telemetryLevel": "error",
     "terminal.external.osxExec": "Alacritty.app",

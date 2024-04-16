@@ -39,6 +39,9 @@
     ~/Library/Application Support/Code/User/keybindings.json:
       create: true
       path: vscode/keybindings.json
+    ~/Library/Application Support/ruff/ruff.toml:
+      create: true
+      path: ruff.toml
     ~/.p10k.zsh: p10k.zsh
     ~/.Rprofile: Rprofile
     # ~/.ssh/config: ssh/config
