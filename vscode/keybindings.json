@@ -35,12 +35,4 @@
         "key": "alt+cmd+x",
         "when": "!config.latex-workshop.bind.altKeymap.enabled"
     },
-    {
-        "command": "workbench.action.nextEditor",
-        "key": "shift+cmd+[BracketRight]"
-    },
-    {
-        "command": "workbench.action.previousEditor",
-        "key": "shift+cmd+[BracketLeft]"
-    },
 ]
