@@ -22,6 +22,8 @@ abbr -a g "git"
 abbr -a gst "git status"
 abbr -a gc "git commit"
 abbr -a gaa 'git add --all .; git status -s'
+abbr -a gpo "git push origin $(git rev-parse --abbrev-ref HEAD)"
+abbr -a gup "git pull --rebase --autostash --all"
 
 # !!
 function last_history_item
