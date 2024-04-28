@@ -30,11 +30,6 @@ if vim.g.vscode then
     vim.g.vimtex_syntax_enabled = 0 -- disable syntax highlighting
     vim.g.vimtex_toc_enabled = 0 -- disable table of contents
     vim.g.vimtex_view_enabled = 0 -- disable pdf viewer
-    vim.g.vimtex_ui_method = {
-        ["confirm"]= "legacy",
-        ["input"]= "legacy",
-        ["select"]= "legacy",
-    }
 end
 
 if vim.fn.has 'mac' == 1 then
