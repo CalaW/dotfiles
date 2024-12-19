@@ -10,6 +10,7 @@
     ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/.config/alacritty/nord.toml: nord-alacritty/src/nord.toml
     ~/.config/bat/config: bat_config
+    ~/.config/clash.meta/cc_config.yaml: clash_meta.yaml
     ~/.config/fish/:
       create: true
       glob: true
@@ -27,6 +28,7 @@
       # glob: true
       path: nvim/lua/
     ~/.config/nvim/init.lua: nvim/init.lua
+    ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
     ~/.config/zellij/config.kdl: zellij.kdl
     ~/.dir_colors: ./nord-dircolors/src/dir_colors
@@ -39,9 +41,10 @@
     ~/Library/Application Support/Code/User/keybindings.json:
       create: true
       path: vscode/keybindings.json
-    ~/Library/Application Support/ruff/ruff.toml:
+    ~/Library/Rime:
       create: true
-      path: ruff.toml
+      glob: true
+      path: rime/**
     ~/.p10k.zsh: p10k.zsh
     ~/.Rprofile: Rprofile
     # ~/.ssh/config: ssh/config

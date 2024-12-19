@@ -22,6 +22,7 @@ specialBeginEnd:
 lookForAlignDelims:
   tabular:
     multiColumnGrouping: 1
+  tblr: 0
 
 modifyLineBreaks:
   preserveBlankLines: 0

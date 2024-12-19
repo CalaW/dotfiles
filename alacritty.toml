@@ -1,5 +1,3 @@
-import = ["~/.config/alacritty/nord.toml"]
-
 [bell]
 animation = "EaseOutExpo"
 color = "#666666"
@@ -16,7 +14,7 @@ normal = { family = "SFMono Nerd Font Mono", style = "Regular" }
 history = 10000
 multiplier = 1
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/fish"
 args = ["--login"]
 
@@ -26,3 +24,8 @@ padding = { x = 10, y = 10 }
 decorations = "buttonless"
 dynamic_padding = false
 option_as_alt = "OnlyLeft"
+
+[general]
+import = ["~/.config/alacritty/nord.toml"]
+
+[terminal]

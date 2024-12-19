@@ -87,8 +87,6 @@ vim.o.pumheight = 10
 -- 永远显示 tabline
 vim.o.showtabline = 2
 vim.o.laststatus = 2
--- 使用增强状态栏插件后不再需要 vim 的模式提示
-vim.o.noshowmode = true
 
 -- line wrap 支持中文
 vim.o.formatoptions = vim.o.formatoptions .. 'mM'

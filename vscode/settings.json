@@ -1,4 +1,5 @@
 {
+    "C_Cpp.intelliSenseEngine": "disabled",
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.suggest.insertMode": "replace",
@@ -6,6 +7,12 @@
     },
     "[csharp]": {
         "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
         "editor.codeActionsOnSave": {
@@ -21,6 +28,9 @@
         "editor.tabSize": 2,
         "editor.wordWrap": "on"
     },
+    "[liquid]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[plaintext]": {
         "editor.wordWrap": "on"
     },
@@ -32,13 +42,16 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true
     },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "apc.activityBar": {
         "hideSettings": true,
         "position": "bottom",
         "size": 25
-    },
-    "apc.electron": {
-        "frame": false
     },
     "apc.statusBar": {
         "height": 25,
@@ -46,7 +59,15 @@
     },
     "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
-    "C_Cpp.intelliSenseEngine": "disabled",
+    "cSpell.userWords": [
+        "Eigen",
+        "matplotlib",
+        "neovim",
+        "pyplot",
+        "scipy",
+        "sklearn",
+        "Tsinghua"
+    ],
     "clangd.arguments": [
         "-j=12",
         "--clang-tidy",
@@ -64,15 +85,9 @@
         "--clang-tidy-checks=performance-*,bugprone-*,protability-*,modernize-*"
     ],
     "cmake.showOptionsMovedNotification": false,
-    "cSpell.userWords": [
-        "Eigen",
-        "matplotlib",
-        "neovim",
-        "pyplot",
-        "scipy",
-        "sklearn",
-        "Tsinghua"
-    ],
+    "custom-ui-style.electron": {
+        "frame": false
+    },
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
     "diffEditor.diffAlgorithm": "advanced",
@@ -113,15 +128,16 @@
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1,
         "GitHub.copilot": 2,
         "GitHub.copilot-labs": 2,
+        "asvetliakov.vscode-neovim": 1,
         "vscodevim.vim": 1
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
@@ -130,8 +146,25 @@
         "yaml": false
     },
     "github.gitProtocol": "ssh",
+    "gitlens.launchpad.indicator.enabled": false,
+    "gitlens.launchpad.indicator.polling.enabled": false,
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.sortby": [
+        "year-desc"
+    ],
+    "latex-workshop.bibtex-format.trailingComma": true,
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-l=%DIR%/latexindent.yaml",
+        "-m",
+        "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'",
+        "--GCString"
+    ],
     "latex-workshop.hover.preview.newcommand.newcommandFile": "/Users/calaw/Documents/Program/LaTeX-Template/CalaWMath.sty",
     "latex-workshop.intellisense.citation.backend": "biblatex",
     "latex-workshop.intellisense.package.extra": [
@@ -249,15 +282,6 @@
             "name": "latexmk-pdfLaTeX"
         }
     ],
-    "latex-workshop.latexindent.args": [
-        "-c",
-        "%DIR%/",
-        "%TMPFILE%",
-        "-l=%DIR%/latexindent.yaml",
-        "-m",
-        "-y=defaultIndent: '%INDENT%',indentRules: item: '%INDENT%'",
-        "--GCString"
-    ],
     "latex-workshop.linting.lacheck.enabled": true,
     "latex-workshop.texcount.autorun": "onSave",
     "latex-workshop.view.pdf.external.synctex.args": [
@@ -284,6 +308,9 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "redhat.telemetry.enabled": false,
+    "remote.SSH.remotePlatform": {
+        "qh.bft-robot.com": "linux"
+    },
     "ruff.path": [
         "/opt/homebrew/bin/ruff"
     ],
@@ -324,6 +351,7 @@
         "language-julia.interrupt"
     ],
     "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.integrated.env.osx": {
@@ -348,14 +376,14 @@
     "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
     "window.commandCenter": false,
     "window.titleBarStyle": "native",
-    "workbench.colorCustomizations": {
-        "activityBar.activeBorder": "#00000000",
-        "activityBar.background": "#0B0A10",
-        "scrollbar.shadow": "#00000000",
-        "sideBar.border": "#0B0A10",
-        "statusBarItem.remoteBackground": "#7970A9"
-    },
     "workbench.colorTheme": "Dracula Pro",
+    // "workbench.colorCustomizations": {
+    //     "activityBar.activeBorder": "#00000000",
+    //     "activityBar.background": "#0B0A10",
+    //     "scrollbar.shadow": "#00000000",
+    //     "sideBar.border": "#0B0A10",
+    //     "statusBarItem.remoteBackground": "#7970A9"
+    // },
     "workbench.editor.showTabs": "single",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
@@ -363,5 +391,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.layoutControl.enabled": false,
     "workbench.productIconTheme": "material-product-icons",
-    "workbench.tips.enabled": false
+    "workbench.tips.enabled": false,
+    "xml.format.maxLineWidth": 120
 }
