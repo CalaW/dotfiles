@@ -1,0 +1,14 @@
+command = "/opt/homebrew/bin/fish --login"
+font-family = "SFMono Nerd Font Mono"
+font-size = 16
+window-height = 24
+window-width = 82
+window-padding-x = 10,10
+window-padding-y = 10,10
+window-save-state = never
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+quit-after-last-window-closed = true
+theme = nord
+
+shell-integration = "fish"

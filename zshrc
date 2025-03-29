@@ -19,16 +19,8 @@ export SAVEHIST=$HISTSIZE
 export LANG="zh_CN.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-export CPLUS_INCLUDE_PATH=/opt/homebrew/include/eigen3 #eigen library
-
 export EDITOR='nvim'
 export PAGER='bat'
-# export TERM=xtrem-256color
-
-# export HOMEBREW_NO_AUTO_UPDATE=1
-export NEOVIDE_FRAME='none'
-export PATH="/Users/calaw/.local/bin:$PATH"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # themes
 test -r ~/.dir_colors && eval $(gdircolors ~/.dir_colors)

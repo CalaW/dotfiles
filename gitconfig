@@ -19,7 +19,6 @@
 [core]
 	editor = nvim
 	quotepath = false
-	excludesfile = /Users/calaw/.gitignore
 [gpg]
 	program = /opt/homebrew/bin/gpg
 	format = openpgp

@@ -83,53 +83,11 @@ set mouse=a
 
 set scrolloff=5 " show lines above and below cursor (when possible)
 
-" Undo file
-set undofile " Maintain undo history between sessions
-set undodir=~/.vim/undodir
-
-" Auto installation of Vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" Place viminfo in XDG state directory
+if empty($XDG_STATE_HOME)
+  let $XDG_STATE_HOME = expand('~/.local/state')
 endif
-
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
-
-" Nord theme
-Plug 'arcticicestudio/nord-vim'
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-Plug 'junegunn/vim-easy-align'
-
-" fzf
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-" ale
-Plug 'dense-analysis/ale'
-
-" nerd-commenter
-Plug 'preservim/nerdcommenter'
-
-" WakaTime
-Plug 'wakatime/vim-wakatime'
-
-" lightline
-Plug 'itchyny/lightline.vim'
-
-" committia
-"Plug 'rhysd/committia.vim'
-
-" airline
-Plug 'vim-airline/vim-airline'
-
-" Initialize plugin system
-call plug#end()
-
-packadd! dracula_pro
-syntax enable
-let g:dracula_colorterm = 0
-colorscheme dracula_pro
+if !isdirectory($XDG_STATE_HOME . "/vim")
+    call mkdir($XDG_STATE_HOME . "/vim", "p")
+endif
+set viminfo+=n$XDG_STATE_HOME/vim/viminfo

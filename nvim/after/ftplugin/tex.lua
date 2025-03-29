@@ -1,30 +1,30 @@
 -- https://github.com/kylechui/nvim-surround/discussions/53#discussioncomment-3142459
-require("nvim-surround").buffer_setup ({
-    surrounds = {
-        ["c"] = {
-            add = function()
-                local cmd = require("nvim-surround.config").get_input "Command: "
-                return { { "\\" .. cmd .. "{" }, { "}" } }
-            end,
-        },
-        ["e"] = {
-            add = function()
-                local env = require("nvim-surround.config").get_input "Environment: "
-                return { { "\\begin{" .. env .. "}" }, { "\\end{" .. env .. "}" } }
-            end,
-        },
-        ["m"] = {
-            add = { "\\(", "\\)" },
-        },
-        -- Chinese surroundings
-        ["）"] = {
-            add = { "（", "）" },
-        }
-    },
+require("nvim-surround").buffer_setup({
+	surrounds = {
+		["c"] = {
+			add = function()
+				local cmd = require("nvim-surround.config").get_input("Command: ")
+				return { { "\\" .. cmd .. "{" }, { "}" } }
+			end,
+		},
+		["e"] = {
+			add = function()
+				local env = require("nvim-surround.config").get_input("Environment: ")
+				return { { "\\begin{" .. env .. "}" }, { "\\end{" .. env .. "}" } }
+			end,
+		},
+		["m"] = {
+			add = { "\\(", "\\)" },
+		},
+		-- Chinese surroundings
+		["）"] = {
+			add = { "（", "）" },
+		},
+	},
 })
 
 local map = vim.keymap.set
-local opt = {noremap = true, silent = true}
+local opt = { noremap = true, silent = true }
 
 -- Use `i` for the item text object
 map({ "x", "o" }, "ai", "<Plug>(vimtex-am)", opt)

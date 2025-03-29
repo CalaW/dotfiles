@@ -1,10 +1,19 @@
 # Dotfiles
 Configuration files for:
-- alacritty
-- bash (not used anymore)
 - git
 - powerlevel10k
-- R
 - tmux
 - vim
 - zsh
+- fish
+- neovim
+- latexindent
+- rime
+- visual studio code
+- ghostty
+- bat
+- pip
+- ruff
+- uv
+- starship
+- zellij

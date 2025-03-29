@@ -20,7 +20,7 @@ treesitter.setup({
 		"markdown_inline",
 	},
 	highlight = {
-		enable = not vim.g.vscode,
+		-- enable = not vim.g.vscode,
         disable = {"latex"},
 		additional_vim_regex_highlighting = false,
 	},

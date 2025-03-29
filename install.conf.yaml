@@ -1,55 +1,33 @@
 - defaults:
     link:
+      create: true
       relink: true
 
-- clean: ["~"]
+- clean: ["~", "~/.config"]
 
 - link:
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.config/alacritty/alacritty.toml: alacritty.toml
-    ~/.config/alacritty/nord.toml: nord-alacritty/src/nord.toml
     ~/.config/bat/config: bat_config
-    ~/.config/clash.meta/cc_config.yaml: clash_meta.yaml
-    ~/.config/fish/:
-      create: true
-      glob: true
-      path: fish/**
-    ~/.config/latexindent/:
-      create: true
-      glob: true
-      path: latexindent/**
-      exclude: [latexindent/indentconfig.yaml]
-    ~/.config/nvim/after/:
-      create: true
-      path: nvim/after/
-    ~/.config/nvim/lua/:
-      create: true
-      # glob: true
-      path: nvim/lua/
-    ~/.config/nvim/init.lua: nvim/init.lua
+    ~/.config/fish/: fish
+    ~/.config/ghostty/config: ghostty
+    ~/.config/git/config: gitconfig
+    ~/.config/git/ignore: gitignore
+    ~/.config/karabiner: karabiner
+    ~/.config/latexindent/latexindent.yaml: latexindent/latexindent.yaml
+    ~/.config/nvim: nvim
+    ~/.config/pip/pip.conf: pip.conf
     ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
+    ~/.config/tmux/tmux.conf: tmux.conf
+    ~/.config/uv/uv.toml: uv.toml
+    ~/.config/vim/vimrc: vimrc
     ~/.config/zellij/config.kdl: zellij.kdl
-    ~/.dir_colors: ./nord-dircolors/src/dir_colors
-    ~/.gitconfig: gitconfig
-    ~/.gitignore: gitignore
     ~/.indentconfig.yaml: latexindent/indentconfig.yaml
-    ~/Library/Application Support/Code/User/settings.json:
-      create: true
-      path: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json:
-      create: true
-      path: vscode/keybindings.json
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/Library/Rime:
-      create: true
       glob: true
       path: rime/**
     ~/.p10k.zsh: p10k.zsh
-    ~/.Rprofile: Rprofile
-    # ~/.ssh/config: ssh/config
-    ~/.tmux.conf: tmux.conf
-    ~/.vimrc: vimrc
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
 

@@ -65,8 +65,9 @@ local plugins = {
         event = "VeryLazy",
         cond = not vim.g.vscode,
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = get_config("nvim-tree") 
+        config = get_config("nvim-tree")
     },
+    -- bufferline: top tab line
     {
         "akinsho/bufferline.nvim",
         event = "VeryLazy",
@@ -74,6 +75,7 @@ local plugins = {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = get_config("bufferline")
     },
+    -- lualine: bottom buffer line
     {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
@@ -111,31 +113,11 @@ local plugins = {
         cond = not vim.g.vscode,
         config = get_config("indent-blankline"),
     },
-    -- toggleterm
-    -- {
-    --     "akinsho/toggleterm.nvim",
-    --     cond = not vim.g.vscode,
-    --     config = function()
-    --         require("plugin-config.toggleterm")
-    --     end
-    -- },
     -- nvim-surround
     {
         "kylechui/nvim-surround",
         event = "VeryLazy",
         config = get_config("nvim-surround"),
-    },
-    -- Comment
-    {
-        "numToStr/Comment.nvim",
-        event = "VeryLazy",
-        cond = not vim.g.vscode,
-    },
-    -- nvim-autopairs
-    {
-        "windwp/nvim-autopairs",
-        event = "VeryLazy",
-        cond = not vim.g.vscode,
     },
     -- leap
     {
@@ -149,6 +131,7 @@ local plugins = {
         ft = "tex",
         init = get_config("vimtex"),
     },
+    -- wakatime for coding time status
     {
         "wakatime/vim-wakatime",
         event = "VeryLazy",
@@ -200,13 +183,6 @@ local plugins = {
         "rafamadriz/friendly-snippets",
         cond = not vim.g.vscode,
     },
-    -- ui
-    -- {
-    --     "glepnir/lspsaga.nvim",
-    --     cond = not vim.g.vscode,
-    --     event = "LspAttach",
-    --     dependencies = { "nvim-tree/nvim-web-devicons", "nvim-treesitter/nvim-treesitter"},
-    -- },
     -- formatting
     {
         "nvimtools/none-ls.nvim",

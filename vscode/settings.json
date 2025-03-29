@@ -1,5 +1,4 @@
 {
-    "C_Cpp.intelliSenseEngine": "disabled",
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
         "editor.suggest.insertMode": "replace",
@@ -48,26 +47,9 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "apc.activityBar": {
-        "hideSettings": true,
-        "position": "bottom",
-        "size": 25
-    },
-    "apc.statusBar": {
-        "height": 25,
-        "position": "editor-bottom"
-    },
     "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
-    "cSpell.userWords": [
-        "Eigen",
-        "matplotlib",
-        "neovim",
-        "pyplot",
-        "scipy",
-        "sklearn",
-        "Tsinghua"
-    ],
+    "C_Cpp.intelliSenseEngine": "disabled",
     "clangd.arguments": [
         "-j=12",
         "--clang-tidy",
@@ -85,13 +67,23 @@
         "--clang-tidy-checks=performance-*,bugprone-*,protability-*,modernize-*"
     ],
     "cmake.showOptionsMovedNotification": false,
+    "cSpell.userWords": [
+        "Eigen",
+        "matplotlib",
+        "neovim",
+        "pyplot",
+        "scipy",
+        "sklearn",
+        "Tsinghua"
+    ],
     "custom-ui-style.electron": {
         "frame": false
     },
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
     "diffEditor.diffAlgorithm": "advanced",
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": true,
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
     "doxdocgen.generic.authorName": "CalaW",
@@ -128,15 +120,16 @@
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1,
         "GitHub.copilot": 2,
         "GitHub.copilot-labs": 2,
-        "asvetliakov.vscode-neovim": 1,
         "vscodevim.vim": 1
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
@@ -148,8 +141,10 @@
     "github.gitProtocol": "ssh",
     "gitlens.launchpad.indicator.enabled": false,
     "gitlens.launchpad.indicator.polling.enabled": false,
+    "julia.enableCrashReporter": false,
     "julia.enableTelemetry": false,
     "julia.symbolCacheDownload": true,
+    "latex-workshop.bibtex-fields.sort.enabled": true,
     "latex-workshop.bibtex-format.sort.enabled": true,
     "latex-workshop.bibtex-format.sortby": [
         "year-desc"
@@ -333,7 +328,8 @@
         "csharpier.csharpier-vscode",
         "thqby.vscode-autohotkey2-lsp",
         "julialang.language-julia",
-        "yy0931.mplstyle"
+        "yy0931.mplstyle",
+        "ms-toolsai.datawrangler"
     ],
     "settingsSync.ignoredSettings": [
         "vim.autoSwitchInputMethod.defaultIM",
@@ -343,7 +339,8 @@
         "vim.useCtrlKeys",
         "vim.sneak",
         "http.proxy",
-        "ruff.path"
+        "ruff.path",
+        "workbench.activityBar.location"
     ],
     "telemetry.telemetryLevel": "error",
     "terminal.external.osxExec": "Alacritty.app",
@@ -361,21 +358,9 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.showExitAlert": false,
-    "todo-tree.filtering.excludeGlobs": [
-        "**/vendor/**",
-        "**/node_modules/**",
-        "**/dist/**",
-        "**/bower_components/**",
-        "**/build/**",
-        "**/.vscode/**",
-        "**/.github/**",
-        "**/_output/**",
-        "**/*.min.*",
-        "**/*.map"
-    ],
-    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
-    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Dracula Pro",
     // "workbench.colorCustomizations": {
     //     "activityBar.activeBorder": "#00000000",
@@ -392,5 +377,8 @@
     "workbench.layoutControl.enabled": false,
     "workbench.productIconTheme": "material-product-icons",
     "workbench.tips.enabled": false,
-    "xml.format.maxLineWidth": 120
+    "xml.format.maxLineWidth": 120,
+    "xml.server.preferBinary": true,
+    "zenMode.hideLineNumbers": false,
+    "editor.glyphMargin": false
 }
