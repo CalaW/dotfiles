@@ -1,5 +1,17 @@
 set -q MY_ABBRS_INITIALIZED; and return
 
+# Alias
+abbr -a cat bat
+abbr -a df duf
+abbr -a du dust
+abbr -a find fd
+abbr -a grep rg
+abbr -a ping gping
+abbr -a ps procs
+abbr -a top btm
+abbr -a vim nvim
+
+
 abbr -a -- s sudo
 abbr -a -- g git
 abbr -a -- gst 'git status'
@@ -13,7 +25,6 @@ abbr -a -- nv nvim
 abbr -a -- rm trash
 abbr -a -- mv 'mv -iv' # ask when override
 abbr -a -- cp 'cp -iv' # ask when override
-abbr -a -- df 'df -h' # human readable disk
 abbr -a -- icloud 'cd ~/Library/Mobile\ documents/com~apple~CloudDocs'
 abbr -a -- myip 'curl https://ipinfo.io/json'
 abbr -a -- msupdate-disable 'sudo chmod 000 /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app'
