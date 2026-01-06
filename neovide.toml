@@ -1,0 +1,8 @@
+frame = "none"
+
+[font]
+normal = ["MonoLisa Variable"]
+size = 16.0
+
+[font.features]
+"MonoLisa Variable" = ["+calt", "-liga", "+zero", "+ss04", "+ss12"]
