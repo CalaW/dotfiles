@@ -17,6 +17,7 @@
         "editor.codeActionsOnSave": {
             "source.sort.json": "explicit"
         },
+        "editor.defaultFormatter": "vscode.json-language-features",
         "editor.formatOnSave": true
     },
     "[latex]": {
@@ -44,6 +45,9 @@
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[shellscript]": {
+        "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
+    },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
@@ -67,6 +71,19 @@
         "--clang-tidy-checks=performance-*,bugprone-*,protability-*,modernize-*"
     ],
     "cmake.showOptionsMovedNotification": false,
+    "colorize.decoration_type": "square-dot",
+    "colorize.languages": [
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "postcss",
+        "sss",
+        "stylus",
+        "xml",
+        "svg",
+        "json"
+    ],
     "cSpell.userWords": [
         "Eigen",
         "matplotlib",
@@ -82,13 +99,14 @@
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
     "diffEditor.diffAlgorithm": "advanced",
-    "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": true,
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
     "doxdocgen.generic.authorName": "CalaW",
     "doxdocgen.generic.useGitUserEmail": true,
     "doxdocgen.generic.useGitUserName": true,
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -96,6 +114,7 @@
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss04' on, 'ss12' on",
     "editor.fontSize": 16,
     "editor.fontVariations": true,
+    "editor.glyphMargin": false,
     "editor.guides.highlightActiveIndentation": "always",
     "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.enabled": true,
@@ -106,6 +125,7 @@
     "editor.minimap.showSlider": "always",
     "editor.occurrencesHighlight": "off",
     "editor.renderWhitespace": "trailing",
+    "editor.scrollbar.horizontal": "hidden",
     "editor.semanticHighlighting.enabled": true,
     "editor.showFoldingControls": "never",
     "editor.unicodeHighlight.allowedCharacters": {
@@ -117,6 +137,9 @@
         "zh-hant": true
     },
     "editor.unicodeHighlight.invisibleCharacters": false,
+    "explorer.autoRevealExclude": {
+        "**/.venv": true
+    },
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.experimental.affinity": {
@@ -127,17 +150,23 @@
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.mypy_cache": true
+    },
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
+        "latex": true,
         "markdown": true,
         "plaintext": true,
         "scminput": false,
-        "yaml": false
+        "yaml": true
     },
+    "github.copilot.nextEditSuggestions.enabled": true,
     "github.gitProtocol": "ssh",
     "gitlens.launchpad.indicator.enabled": false,
     "gitlens.launchpad.indicator.polling.enabled": false,
@@ -302,10 +331,12 @@
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.supportDocstringTemplate": true,
     "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
-        "qh.bft-robot.com": "linux"
+        "ortho-127pc": "linux"
     },
+    "remote.SSH.useLocalServer": false,
     "ruff.path": [
         "/opt/homebrew/bin/ruff"
     ],
@@ -343,7 +374,6 @@
         "workbench.activityBar.location"
     ],
     "telemetry.telemetryLevel": "error",
-    "terminal.external.osxExec": "Alacritty.app",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
@@ -351,9 +381,6 @@
     "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.drawBoldTextInBrightColors": false,
-    "terminal.integrated.env.osx": {
-        "FIG_NEW_SESSION": "1"
-    },
     "terminal.integrated.fontFamily": "SFMono Nerd Font Mono",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.gpuAcceleration": "on",
@@ -361,15 +388,7 @@
     "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Dracula Pro",
-    // "workbench.colorCustomizations": {
-    //     "activityBar.activeBorder": "#00000000",
-    //     "activityBar.background": "#0B0A10",
-    //     "scrollbar.shadow": "#00000000",
-    //     "sideBar.border": "#0B0A10",
-    //     "statusBarItem.remoteBackground": "#7970A9"
-    // },
-    "workbench.editor.showTabs": "single",
+    "workbench.colorTheme": "Monokai Pro",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -378,7 +397,8 @@
     "workbench.productIconTheme": "material-product-icons",
     "workbench.tips.enabled": false,
     "xml.format.maxLineWidth": 120,
+    "xml.format.preserveAttributeLineBreaks": false,
+    "xml.format.spaceBeforeEmptyCloseTag": false,
     "xml.server.preferBinary": true,
-    "zenMode.hideLineNumbers": false,
-    "editor.glyphMargin": false
+    "zenMode.hideLineNumbers": false
 }

@@ -35,4 +35,26 @@
         "key": "alt+cmd+x",
         "when": "!config.latex-workshop.bind.altKeymap.enabled"
     },
+    {
+        "command": "python.execInDedicatedTerminal",
+        "key": "ctrl+shift+alt+cmd+r"
+    },
+    {
+        "command": "workbench.action.togglePanel",
+        "key": "ctrl+`"
+    },
+    {
+        "command": "-workbench.action.togglePanel",
+        "key": "cmd+j"
+    },
+    {
+        "command": "workbench.action.terminal.toggleTerminal",
+        "key": "cmd+j",
+        "when": "terminal.active"
+    },
+    {
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "key": "ctrl+`",
+        "when": "terminal.active"
+    },
 ]
