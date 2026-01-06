@@ -17,3 +17,8 @@ Configuration files for:
 - uv
 - starship
 - zellij
+
+install dotbot via `uv` or `homebrew`, then run
+```shell
+dotbot -d ~/.dotfiles -c ~/.dotfiles/install.conf.yaml
+```

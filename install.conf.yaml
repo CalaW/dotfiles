@@ -7,13 +7,14 @@
 
 - link:
     ~/.config/bat/config: bat_config
-    ~/.config/fish/: fish
+    ~/.config/fish: fish
     ~/.config/ghostty/config: ghostty
     ~/.config/git/config: gitconfig
     ~/.config/git/ignore: gitignore
     ~/.config/karabiner: karabiner
     ~/.config/latexindent/latexindent.yaml: latexindent/latexindent.yaml
     ~/.config/nvim: nvim
+    ~/.config/neovide/config.toml: neovide.toml
     ~/.config/pip/pip.conf: pip.conf
     ~/.config/ruff/ruff.toml: ruff.toml
     ~/.config/starship.toml: starship.toml
@@ -30,6 +31,3 @@
     ~/.p10k.zsh: p10k.zsh
     ~/.zprofile: zprofile
     ~/.zshrc: zshrc
-
-- shell:
-    - [git submodule update --init --recursive --remote, Installing submodules]
