@@ -21,7 +21,7 @@ im_select.setup({
     -- For Windows/WSL, default: "im-select.exe"
     -- For macOS, default: "macism"
     -- For Linux, default: "fcitx5-remote" or "fcitx-remote" or "ibus"
-    default_command = "macism",
+    default_command = "im-select",
 
     -- Restore the previous used input method state when the following events
     -- are triggered, if you don't want to restore previous used im in Insert mode,
