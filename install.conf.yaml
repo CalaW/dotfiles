@@ -14,6 +14,8 @@
     ~/.config/karabiner: karabiner
     ~/.config/latexindent/latexindent.yaml: latexindent/latexindent.yaml
     ~/.config/nvim: nvim
+    ~/.config/nvim_vscode: nvim_vscode
+    ~/.config/neovide/neovide.icon: neovide.icon
     ~/.config/neovide/config.toml: neovide.toml
     ~/.config/pip/pip.conf: pip.conf
     ~/.config/ruff/ruff.toml: ruff.toml

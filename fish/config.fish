@@ -33,22 +33,23 @@ set -gx HOMEBREW_BREW_GIT_REMOTE "https://mirrors.tuna.tsinghua.edu.cn/git/homeb
 set -gx HOMEBREW_CORE_GIT_REMOTE "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    fish_vi_key_bindings
-    # Emulates vim's cursor shape behavior
-    # Set the normal and visual mode cursors to a block
-    set fish_cursor_default block
-    # Set the insert mode cursor to a line
-    set fish_cursor_insert line
-    # Set the replace mode cursor to an underscore
-    set fish_cursor_replace_one underscore
-    # The following variable can be used to configure cursor shape in
-    # visual mode, but due to fish_cursor_default, is redundant here
-    set fish_cursor_visual block
-    starship init fish | source
-    zoxide init fish | source
-    function postexec_test --on-event fish_postexec
-        echo
-    end
+# Commands to run in interactive sessions can go here
+set -g fish_key_bindings fish_vi_key_bindings
+# Emulates vim's cursor shape behavior
+# Set the normal and visual mode cursors to a block
+set fish_cursor_default block
+# Set the insert mode cursor to a line
+set fish_cursor_insert line
+# Set the replace mode cursor to an underscore
+set fish_cursor_replace_one underscore
+# The following variable can be used to configure cursor shape in
+# visual mode, but due to fish_cursor_default, is redundant here
+set fish_cursor_visual block
+
+starship init fish | source
+
+zoxide init fish | source
+
+function postexec_test --on-event fish_postexec
+    echo
 end

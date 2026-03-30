@@ -54,6 +54,7 @@
     "breadcrumbs.enabled": false,
     "breadcrumbs.icons": false,
     "C_Cpp.intelliSenseEngine": "disabled",
+    "chat.viewSessions.orientation": "stacked",
     "clangd.arguments": [
         "-j=12",
         "--clang-tidy",
@@ -152,18 +153,21 @@
     "files.autoSaveDelay": 10000,
     "files.exclude": {
         "**/__pycache__": true,
-        "**/.mypy_cache": true
+        "**/.mypy_cache": true,
+        "**/.ruff_cache": true
     },
     "git.autofetch": true,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
-        "latex": true,
-        "markdown": true,
         "plaintext": true,
+        "markdown": true,
         "scminput": false,
+        "latex": true,
         "yaml": true
     },
     "github.copilot.nextEditSuggestions.enabled": true,
@@ -332,8 +336,12 @@
     "python.analysis.autoImportCompletions": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.supportDocstringTemplate": true,
+    "python.createEnvironment.trigger": "off",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python.useEnvironmentsExtension": true,
     "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
+        "dental-pc": "linux",
         "ortho-127pc": "linux"
     },
     "remote.SSH.useLocalServer": false,
@@ -342,6 +350,7 @@
     ],
     "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
+    "scm.autoReveal": false,
     "security.promptForLocalFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
     "settingsSync.ignoredExtensions": [
@@ -384,7 +393,9 @@
     "terminal.integrated.fontFamily": "SFMono Nerd Font Mono",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.initialHint": false,
     "terminal.integrated.showExitAlert": false,
+    "ty.inlayHints.variableTypes": false,
     "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
     "workbench.activityBar.location": "hidden",
@@ -400,5 +411,7 @@
     "xml.format.preserveAttributeLineBreaks": false,
     "xml.format.spaceBeforeEmptyCloseTag": false,
     "xml.server.preferBinary": true,
-    "zenMode.hideLineNumbers": false
+    "zenMode.hideLineNumbers": false,
+    "cSpell.diagnosticLevel": "Hint",
+    "vscode-neovim.NVIM_APPNAME": "nvim_vscode"
 }

@@ -19,6 +19,7 @@ abbr -a -- gc 'git commit'
 abbr -a -- gaa 'git add --all .; git status -s'
 abbr -a -- gup 'git pull --rebase --autostash --all'
 abbr -a --set-cursor='%' -- ghcs 'gh copilot suggest "%"'
+abbr -a --set-cursor='%' -- hist 'history | grep "%"'
 abbr -a -- chmox 'chmod +x'
 abbr -a -- cwd 'pwd | pbcopy'
 abbr -a -- nv nvim
@@ -35,5 +36,7 @@ function last_history_item
     echo "$history[1]  # use alt-s instead"
 end
 abbr -a !! --position anywhere --function last_history_item
+
+abbr --add fds --position anywhere --function __finder_selected_path_for_abbr  # Finder selection
 
 set -g MY_ABBRS_INITIALIZED true

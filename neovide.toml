@@ -1,4 +1,5 @@
 frame = "none"
+icon = "~/.config/neovide/neovide.icon"
 
 [font]
 normal = ["MonoLisa Variable"]
