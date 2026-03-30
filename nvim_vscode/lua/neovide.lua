@@ -1,3 +1,4 @@
+-- TODO move this to new lazyvim config
 local map = vim.keymap.set
 local opt = { noremap = true, silent = true }
 
