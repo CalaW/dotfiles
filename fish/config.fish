@@ -4,8 +4,8 @@ set -gx XDG_DATA_HOME "$HOME/.local/share"
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx XDG_STATE_HOME "$HOME/.local/state"
 set -gx XDG_CACHE_HOME "$HOME/.cache"
-set -gx SHELL "fish"
-set -gx EDITOR "nvim"
+set -gx SHELL fish
+set -gx EDITOR nvim
 # set -gx GPG_TTY (tty)
 
 # Add HomeBrew's bin directory to path so you can use HomeBrew's binaries like `starship`
@@ -20,7 +20,7 @@ set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # fzf
 set -gx FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
 set -gx FZF_DEFAULT_COMMAND "fd --type file --color=always --hidden --exclude .git"
-set -gx FZF_DEFAULT_OPTS "--ansi"
+set -gx FZF_DEFAULT_OPTS --ansi
 set -gx FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
 
 # docker
@@ -32,6 +32,7 @@ set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.tuna.tsinghua.edu.cn/homebrew-bo
 set -gx HOMEBREW_BREW_GIT_REMOTE "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 set -gx HOMEBREW_CORE_GIT_REMOTE "https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
 set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+set -gx HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS 1
 
 # Commands to run in interactive sessions can go here
 set -g fish_key_bindings fish_vi_key_bindings
@@ -53,3 +54,13 @@ zoxide init fish | source
 function postexec_test --on-event fish_postexec
     echo
 end
+
+# >>> vscode python
+# version: 0.1.1
+if not set -q VSCODE_PYTHON_AUTOACTIVATE_GUARD
+    set -gx VSCODE_PYTHON_AUTOACTIVATE_GUARD 1
+    if test "$TERM_PROGRAM" = vscode; and set -q VSCODE_PYTHON_FISH_ACTIVATE
+        eval $VSCODE_PYTHON_FISH_ACTIVATE
+    end
+end
+# <<< vscode python

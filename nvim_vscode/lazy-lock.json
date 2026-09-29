@@ -1,8 +1,8 @@
 {
   "im-select.nvim": { "branch": "master", "commit": "963a4e9d528ef8a8d328eeff690593b0146d30e2" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
-  "leap.nvim": { "branch": "main", "commit": "e20f33507bd2d6c671b7273f797f2d3cf521ac61" },
-  "nvim-surround": { "branch": "main", "commit": "61319d4bd1c5e336e197defa15bd104c51f0fb29" },
+  "leap.nvim": { "branch": "main", "commit": "277e04fad21e3af05a55cc414757b09a704f2a92" },
+  "nvim-surround": { "branch": "main", "commit": "2e93e154de9ff326def6480a4358bfc149d5da2c" },
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
-  "vimtex": { "branch": "master", "commit": "82d2305ff71dfb3bd91602534cc9bb9a195bcb38" }
+  "vimtex": { "branch": "master", "commit": "16a5609d17a436db7f48046d91747fd6a9d75c74" }
 }

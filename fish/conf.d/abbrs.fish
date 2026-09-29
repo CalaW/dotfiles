@@ -38,5 +38,6 @@ end
 abbr -a !! --position anywhere --function last_history_item
 
 abbr --add fds --position anywhere --function __finder_selected_path_for_abbr  # Finder selection
+abbr --add fdf --position anywhere --function __finder_frontmost_path_for_abbr  # Finder path
 
 set -g MY_ABBRS_INITIALIZED true

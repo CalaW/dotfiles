@@ -31,6 +31,9 @@
     "[liquid]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[plaintext]": {
         "editor.wordWrap": "on"
     },
@@ -85,6 +88,7 @@
         "svg",
         "json"
     ],
+    "cSpell.diagnosticLevel": "Hint",
     "cSpell.userWords": [
         "Eigen",
         "matplotlib",
@@ -100,7 +104,7 @@
     "debug.console.fontSize": 16,
     "diffEditor.codeLens": true,
     "diffEditor.diffAlgorithm": "advanced",
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": true,
     "doxdocgen.file.copyrightTag": [],
     "doxdocgen.generic.authorEmail": "chen-che20@mails.tsinghua.edu.cn",
@@ -149,6 +153,9 @@
         "GitHub.copilot-labs": 2,
         "vscodevim.vim": 1
     },
+    "extensions.supportAgentsWindow": {
+        "monokai.theme-monokai-pro-vscode": true
+    },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 10000,
     "files.exclude": {
@@ -156,18 +163,20 @@
         "**/.mypy_cache": true,
         "**/.ruff_cache": true
     },
+    "git.addAICoAuthor": "chatAndAgent",
     "git.autofetch": true,
     "git.blame.editorDecoration.enabled": false,
     "git.blame.statusBarItem.enabled": true,
     "git.confirmSync": false,
+    "git.detectWorktrees": true,
     "git.openRepositoryInParentFolders": "never",
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": true,
-        "markdown": true,
-        "scminput": false,
         "latex": true,
+        "markdown": true,
+        "plaintext": true,
+        "scminput": false,
         "yaml": true
     },
     "github.copilot.nextEditSuggestions.enabled": true,
@@ -332,16 +341,20 @@
         "--ignore-missing-imports"
     ],
     "notebook.lineNumbers": "on",
+    "python-envs.terminal.autoActivationType": "shellStartup",
     "python.analysis.autoFormatStrings": true,
-    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.callArgumentNames": "partial",
     "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.supportDocstringTemplate": true,
     "python.createEnvironment.trigger": "off",
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python.languageServer": "Pylance",
     "python.useEnvironmentsExtension": true,
     "redhat.telemetry.enabled": false,
     "remote.SSH.remotePlatform": {
         "dental-pc": "linux",
+        "IRML-4": "linux",
         "ortho-127pc": "linux"
     },
     "remote.SSH.useLocalServer": false,
@@ -395,7 +408,9 @@
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.initialHint": false,
     "terminal.integrated.showExitAlert": false,
+    "ty.disableLanguageServices": true,
     "ty.inlayHints.variableTypes": false,
+    "vscode-neovim.NVIM_APPNAME": "nvim_vscode",
     "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
     "workbench.activityBar.location": "hidden",
@@ -403,6 +418,7 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
+    "workbench.experimental.modernUI": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.layoutControl.enabled": false,
     "workbench.productIconTheme": "material-product-icons",
@@ -410,8 +426,9 @@
     "xml.format.maxLineWidth": 120,
     "xml.format.preserveAttributeLineBreaks": false,
     "xml.format.spaceBeforeEmptyCloseTag": false,
+    "xml.server.binary.trustedHashes": [
+        "637a908b82398d8d99f3fc966098825e5357751222d6582323be9aff94555ec8"
+    ],
     "xml.server.preferBinary": true,
-    "zenMode.hideLineNumbers": false,
-    "cSpell.diagnosticLevel": "Hint",
-    "vscode-neovim.NVIM_APPNAME": "nvim_vscode"
+    "zenMode.hideLineNumbers": false
 }
